@@ -3,7 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Smart AI Tools Guides Blog</title>
+
+<title>Blog - Smart AI Tools Guides</title>
+
+<meta name="description"
+content="Explore AI tools, tutorials, image utilities, and productivity resources.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -17,121 +21,165 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#f7f8fc;
+background:#f5f6fb;
+color:#222;
 }
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* HEADER */
 
 header{
 background:#fff;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
-padding:20px;
+box-shadow:0 2px 12px rgba(0,0,0,.05);
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-.nav{
-max-width:1200px;
-margin:auto;
+.navbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:18px 0;
 }
 
 .logo{
 font-size:28px;
 font-weight:700;
-color:#6c63ff;
+background:linear-gradient(90deg,#6a5cff,#9f55ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-.nav a{
+.nav-links{
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
 text-decoration:none;
-color:#222;
-font-weight:600;
+color:#333;
+font-weight:500;
+transition:.3s;
 }
 
-.hero{
+.nav-links a:hover{
+color:#6a5cff;
+}
+
+/* BLOG TITLE */
+
+.blog-header{
+padding:70px 20px 50px;
 text-align:center;
-padding:70px 20px;
-background:linear-gradient(135deg,#6c63ff,#8f5cff);
-color:white;
 }
 
-.hero h1{
-font-size:50px;
+.blog-header h1{
+font-size:60px;
+font-weight:700;
+color:#6a5cff;
 margin-bottom:15px;
 }
 
-.hero p{
+.blog-header p{
 font-size:18px;
-max-width:700px;
+color:#777;
+max-width:750px;
 margin:auto;
+line-height:1.8;
 }
 
-.container{
-max-width:1200px;
-margin:auto;
-padding:60px 20px;
-}
+/* ARTICLES GRID */
 
-.section-title{
-font-size:38px;
-font-weight:700;
-margin-bottom:40px;
-text-align:center;
+.blog-section{
+padding-bottom:80px;
 }
 
 .blog-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+grid-template-columns:repeat(3,1fr);
 gap:30px;
 }
 
-.card{
-background:white;
-border-radius:20px;
+.article-card{
+background:#fff;
+border-radius:22px;
 overflow:hidden;
 box-shadow:0 10px 30px rgba(0,0,0,.08);
 transition:.3s;
 }
 
-.card:hover{
+.article-card:hover{
 transform:translateY(-8px);
 }
 
-.card img{
-width:100%;
+.article-image{
 height:220px;
+overflow:hidden;
+}
+
+.article-image img{
+width:100%;
+height:100%;
 object-fit:cover;
 }
 
-.card-content{
+.article-content{
 padding:25px;
 }
 
-.card h3{
-margin-bottom:12px;
-font-size:22px;
+.category{
+display:inline-block;
+background:#efeaff;
+color:#6a5cff;
+padding:7px 14px;
+border-radius:30px;
+font-size:13px;
+font-weight:600;
+margin-bottom:15px;
 }
 
-.card p{
+.article-content h2{
+font-size:24px;
+line-height:1.5;
+margin-bottom:15px;
+}
+
+.article-content p{
 color:#666;
-line-height:1.7;
+line-height:1.8;
 margin-bottom:20px;
 }
 
-.btn{
+.read-btn{
 display:inline-block;
-padding:12px 24px;
-background:#6c63ff;
-color:white;
-border-radius:10px;
+padding:12px 22px;
+background:#6a5cff;
+color:#fff;
 text-decoration:none;
+border-radius:10px;
 font-weight:600;
 }
 
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:25px;
-margin-top:60px;
+@media(max-width:900px){
+
+.blog-grid{
+grid-template-columns:1fr;
+}
+
+.blog-header h1{
+font-size:42px;
+}
+
+.nav-links{
+display:none;
+}
+
 }
 
 </style>
@@ -141,52 +189,66 @@ margin-top:60px;
 
 <header>
 
-<div class="nav">
+<div class="container navbar">
 
 <div class="logo">
 Smart AI Tools Guides
 </div>
 
-<a href="/">
-🏠 Home
-</a>
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy Policy</a>
+
+</div>
 
 </div>
 
 </header>
 
-<section class="hero">
-
-<h1>Latest AI Tool Articles</h1>
-
-<p>
-Discover powerful AI tools, image utilities and productivity resources.
-</p>
-
-</section>
+<section class="blog-header">
 
 <div class="container">
 
-<h2 class="section-title">
-Latest Articles
-</h2>
+<h1>Latest Articles</h1>
+
+<p>
+Discover powerful AI tools, image utilities, productivity resources, and in-depth guides designed to help creators, developers, students, and businesses work smarter.
+</p>
+
+</div>
+
+</section>
+
+<section class="blog-section">
+
+<div class="container">
 
 <div class="blog-grid">
+  <!-- ARTICLE 1 -->
 
-<div class="card">
+<div class="article-card">
 
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
+<div class="article-image">
 
-<div class="card-content">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200" alt="Image Resizer Tool">
 
-<h3>Image Resizer Tool</h3>
+</div>
+
+<div class="article-content">
+
+<span class="category">Image Tools</span>
+
+<h2>Image Resizer Tool</h2>
 
 <p>
-Resize images online quickly while maintaining quality and performance.
+Resize images online quickly while maintaining image quality. Perfect for websites, blogs, social media, and digital projects.
 </p>
 
-<a class="btn"
-href="https://www.smartaitoolsguides.site/2026/06/image-resizer-tool.html">
+<a href="article1.html" class="read-btn">
 Read Article
 </a>
 
@@ -194,20 +256,27 @@ Read Article
 
 </div>
 
-<div class="card">
+<!-- ARTICLE 2 -->
 
-<img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6">
+<div class="article-card">
 
-<div class="card-content">
+<div class="article-image">
 
-<h3>AI Image Upscaler</h3>
+<img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200" alt="AI Image Upscaler">
+
+</div>
+
+<div class="article-content">
+
+<span class="category">AI Tools</span>
+
+<h2>AI Image Upscaler</h2>
 
 <p>
-Enhance image quality with advanced AI upscaling technology.
+Enhance image resolution using AI technology and improve visual quality without complicated editing software.
 </p>
 
-<a class="btn"
-href="https://www.smartaitoolsguides.site/2026/05/ai-image-upscaler-enhance-image-quality.html.html">
+<a href="article2.html" class="read-btn">
 Read Article
 </a>
 
@@ -215,20 +284,27 @@ Read Article
 
 </div>
 
-<div class="card">
+<!-- ARTICLE 3 -->
 
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+<div class="article-card">
 
-<div class="card-content">
+<div class="article-image">
 
-<h3>Image Watermark Tool</h3>
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200" alt="Image Watermark Tool">
+
+</div>
+
+<div class="article-content">
+
+<span class="category">Branding Tools</span>
+
+<h2>Image Watermark Tool</h2>
 
 <p>
-Protect your images and add custom watermarks in seconds.
+Protect your images and strengthen your brand identity by adding professional custom watermarks.
 </p>
 
-<a class="btn"
-href="https://www.smartaitoolsguides.site/2026/06/image-watermark-tool.html">
+<a href="article3.html" class="read-btn">
 Read Article
 </a>
 
@@ -240,11 +316,139 @@ Read Article
 
 </div>
 
-<footer>
+</section>
+  <section style="padding:20px 0 80px;">
 
-© 2026 Smart AI Tools Guides
+<div class="container">
+
+<div style="
+background:linear-gradient(135deg,#6a5cff,#9f55ff);
+padding:60px;
+border-radius:25px;
+text-align:center;
+color:white;
+">
+
+<h2 style="
+font-size:42px;
+margin-bottom:20px;
+">
+
+Stay Updated
+
+</h2>
+
+<p style="
+max-width:700px;
+margin:auto;
+line-height:1.8;
+margin-bottom:30px;
+font-size:18px;
+">
+
+Get the latest AI tools, image utilities, tutorials, and technology resources delivered directly to your dashboard.
+
+</p>
+
+<a href="index.html"
+style="
+display:inline-block;
+padding:15px 30px;
+background:white;
+color:#6a5cff;
+text-decoration:none;
+font-weight:700;
+border-radius:12px;
+">
+
+Explore AI Tools
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer style="
+background:#111;
+color:white;
+padding:60px 20px;
+">
+
+<div class="container">
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+">
+
+<div>
+
+<h3 style="margin-bottom:20px;">
+Smart AI Tools Guides
+</h3>
+
+<p style="line-height:1.9;color:#ccc;">
+Discover powerful AI tools, image utilities, productivity resources, and practical guides designed to help creators and businesses succeed online.
+</p>
+
+</div>
+
+<div>
+
+<h3 style="margin-bottom:20px;">
+Quick Links
+</h3>
+
+<p><a href="index.html" style="color:#ccc;text-decoration:none;">Home</a></p>
+
+<p><a href="blog.html" style="color:#ccc;text-decoration:none;">Blog</a></p>
+
+<p><a href="about.html" style="color:#ccc;text-decoration:none;">About</a></p>
+
+<p><a href="contact.html" style="color:#ccc;text-decoration:none;">Contact</a></p>
+
+</div>
+
+<div>
+
+<h3 style="margin-bottom:20px;">
+Legal
+</h3>
+
+<p><a href="privacy.html" style="color:#ccc;text-decoration:none;">Privacy Policy</a></p>
+
+<p style="color:#ccc;">
+Terms & Conditions
+</p>
+
+</div>
+
+</div>
+
+<hr style="
+margin:40px 0;
+border:none;
+height:1px;
+background:#333;
+">
+
+<div style="
+text-align:center;
+color:#999;
+">
+
+© 2026 Smart AI Tools Guides. All Rights Reserved.
+
+</div>
+
+</div>
 
 </footer>
 
 </body>
 </html>
+  
