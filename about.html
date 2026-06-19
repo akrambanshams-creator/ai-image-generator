@@ -25,25 +25,27 @@ a{
 text-decoration:none;
 }
 
-header{
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
-padding:18px 0;
-position:sticky;
-top:0;
-z-index:999;
-}
-
 .container{
 width:90%;
 max-width:1200px;
 margin:auto;
 }
 
+/* Header */
+
+header{
+background:#fff;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
 .navbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:18px 0;
 }
 
 .logo{
@@ -62,13 +64,20 @@ gap:25px;
 .nav-links a{
 color:#222;
 font-weight:500;
+transition:.3s;
 }
+
+.nav-links a:hover{
+color:#6a5cff;
+}
+
+/* Hero */
 
 .hero{
 background:linear-gradient(135deg,#6a5cff,#8f5cff);
-color:white;
-text-align:center;
 padding:100px 20px;
+text-align:center;
+color:white;
 }
 
 .hero h1{
@@ -78,30 +87,289 @@ margin-bottom:20px;
 
 .hero p{
 font-size:20px;
-max-width:800px;
+max-width:850px;
 margin:auto;
 line-height:1.8;
 }
 
+/* Sections */
+
 .section{
-padding:80px 20px;
+padding:80px 0;
 }
 
 .section-title{
 text-align:center;
-font-size:40px;
+font-size:42px;
 margin-bottom:20px;
 }
 
 .section-text{
+text-align:center;
 max-width:900px;
 margin:auto;
-text-align:center;
 line-height:1.9;
 color:#666;
 }
 
+/* Cards */
+
 .cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:50px;
+}
+
+.card{
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+color:#6a5cff;
+margin-bottom:15px;
+}
+
+.card p{
+line-height:1.8;
+color:#666;
+}
+
+/* Stats */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:50px;
+}
+
+.stat{
+background:white;
+padding:35px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.stat h2{
+font-size:42px;
+color:#6a5cff;
+margin-bottom:10px;
+}
+
+/* Footer */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:50px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.nav-links{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="container navbar">
+
+<div class="logo">
+Smart AI Tools Guides
+</div>
+
+<nav class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy Policy</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<h1>About Smart AI Tools Guides</h1>
+
+<p>
+Helping users discover AI tools, image utilities, productivity resources, and educational technology content.
+</p>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">Who We Are</h2>
+
+<p class="section-text">
+Smart AI Tools Guides is a technology-focused platform dedicated to providing useful AI tools, image editing utilities, productivity resources, and educational content. Our goal is to make advanced technology accessible through practical tools and easy-to-follow guides.
+</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">Our Mission</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Accessibility</h3>
+<p>
+Making modern AI tools available to everyone through simple and user-friendly experiences.
+</p>
+</div>
+
+<div class="card">
+<h3>Education</h3>
+<p>
+Providing practical guides and resources that help users understand AI technologies.
+</p>
+</div>
+
+<div class="card">
+<h3>Innovation</h3>
+<p>
+Continuously improving our platform and developing useful digital solutions.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">What We Offer</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>AI Image Tools</h3>
+<p>
+Generate, resize, watermark, enhance and optimize images online.
+</p>
+</div>
+
+<div class="card">
+<h3>Productivity Solutions</h3>
+<p>
+Useful online utilities designed to improve workflow and efficiency.
+</p>
+</div>
+
+<div class="card">
+<h3>Technology Guides</h3>
+<p>
+Educational content focused on AI tools and modern digital technologies.
+</p>
+</div>
+
+<div class="card">
+<h3>Free Resources</h3>
+<p>
+Helpful tools and resources accessible to users worldwide.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">Our Platform</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h2>50+</h2>
+<p>Published Articles</p>
+</div>
+
+<div class="stat">
+<h2>10+</h2>
+<p>Online Tools</p>
+</div>
+
+<div class="stat">
+<h2>Growing</h2>
+<p>Community</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">Our Commitment</h2>
+
+<p class="section-text">
+We are committed to providing accurate information, maintaining transparency, protecting user privacy, and continuously improving our services to deliver the best possible experience for our visitors.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Smart AI Tools Guides. All Rights Reserved.
+
+</footer>
+
+</body>
+</html>.cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
