@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Smart AI Tools Guides</title>
+<title>Smart AI Tools Guides - AI Image Generator</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -18,323 +17,311 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#f7f8fc;
+background:#f8f9ff;
 color:#222;
 }
 
+a{
+text-decoration:none;
+}
+
 .container{
-width:95%;
-max-width:1400px;
+width:90%;
+max-width:1200px;
 margin:auto;
 }
 
-/* HEADER */
+/* Header */
 
 header{
 background:#fff;
-border-bottom:1px solid #eee;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 .navbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:22px 0;
+padding:18px 0;
 }
 
 .logo{
-display:flex;
-align-items:center;
-gap:12px;
-font-size:32px;
+font-size:28px;
 font-weight:700;
-color:#222;
-}
-
-.logo-box{
-width:46px;
-height:46px;
-border-radius:12px;
-background:linear-gradient(135deg,#7b61ff,#9d67ff);
-display:flex;
-justify-content:center;
-align-items:center;
-color:white;
-font-weight:700;
+background:linear-gradient(90deg,#6a5cff,#9f55ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .nav-links{
 display:flex;
-gap:35px;
+gap:25px;
 }
 
 .nav-links a{
-text-decoration:none;
-color:#333;
+color:#222;
 font-weight:500;
 transition:.3s;
 }
 
 .nav-links a:hover{
-color:#7b61ff;
+color:#7c5cff;
 }
 
-/* MAIN GENERATOR */
+/* Hero Section */
 
-.generator-section{
-padding:50px 0;
-}
-
-.generator-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-}
-
-.generator-card{
-background:white;
-padding:35px;
-border-radius:25px;
-box-shadow:0 10px 30px rgba(0,0,0,.05);
-}
-
-.generator-card h2{
-font-size:42px;
-margin-bottom:25px;
-font-weight:700;
-}
-
-.label{
-font-weight:600;
-margin-bottom:10px;
-display:block;
-}
-
-textarea{
-width:100%;
-height:140px;
-padding:18px;
-border:1px solid #ddd;
-border-radius:16px;
-resize:none;
-font-size:15px;
-outline:none;
-}
-
-.generate-btn{
-width:100%;
-margin-top:25px;
-padding:18px;
-border:none;
-border-radius:16px;
-cursor:pointer;
-font-size:18px;
-font-weight:600;
+.hero{
+background:linear-gradient(135deg,#6d7cff,#9b58ff);
+padding:100px 20px;
+text-align:center;
 color:white;
-background:linear-gradient(90deg,#7b61ff,#6ea8ff);
 }
 
-.preview-box{
-height:500px;
-border:2px dashed #ddd;
-border-radius:20px;
+.hero h1{
+font-size:60px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+max-width:800px;
+margin:auto;
+line-height:1.8;
+margin-bottom:35px;
+}
+
+.hero-buttons{
 display:flex;
 justify-content:center;
-align-items:center;
-color:#888;
-font-size:18px;
-margin-top:20px;
-}
-
-.action-buttons{
-display:flex;
 gap:15px;
-margin-top:20px;
+flex-wrap:wrap;
 }
 
-.download-btn{
-flex:1;
-padding:15px;
-border:none;
-border-radius:14px;
-background:linear-gradient(90deg,#7b61ff,#6ea8ff);
-color:white;
+.btn{
+padding:15px 35px;
+border-radius:10px;
 font-weight:600;
-cursor:pointer;
+font-size:16px;
+transition:.3s;
+display:inline-block;
 }
 
-.new-btn{
-flex:1;
-padding:15px;
-border:1px solid #ddd;
-border-radius:14px;
+.btn-primary{
 background:white;
-font-weight:600;
-cursor:pointer;
+color:#6d5cff;
 }
 
-@media(max-width:900px){
+.btn-primary:hover{
+transform:translateY(-3px);
+}
 
-.generator-grid{
-grid-template-columns:1fr;
+.btn-outline{
+border:2px solid white;
+color:white;
+}
+
+.btn-outline:hover{
+background:white;
+color:#6d5cff;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:16px;
 }
 
 .nav-links{
 display:none;
 }
 
-.logo{
-font-size:24px;
-}
-
-.generator-card h2{
-font-size:32px;
-}
-
 }
 
 </style>
 </head>
-
 <body>
 
 <header>
-
 <div class="container navbar">
 
 <div class="logo">
-
-<div class="logo-box">AI</div>
-
 Smart AI Tools Guides
-
 </div>
 
-<div class="nav-links">
+<nav class="nav-links">
 
-<a href="index.html">Home</a>
+<a href="https://www.smartaitoolsguides.site/p/home_23.html">
+Home
+</a>
 
-<a href="privacy.html">Privacy Policy</a>
+<a href="#">
+Generator
+</a>
 
-<a href="terms.html">Terms of Use</a>
+<a href="https://www.smartaitoolsguides.site">
+Blog
+</a>
 
-<a href="blog.html">Blog</a>
+<a href="https://www.smartaitoolsguides.site/p/privacy-policy-smart-ai-tools-guide.html">
+Privacy Policy
+</a>
 
-<a href="about.html">About</a>
+<a href="https://www.smartaitoolsguides.site/p/about-us-smart-ai-tools-guide.html">
+About
+</a>
 
-<a href="contact.html">Contact</a>
+<a href="https://www.smartaitoolsguides.site/p/contact-us-smart-ai-tools-guide.html">
+Contact
+</a>
+
+</nav>
 
 </div>
-
-</div>
-
 </header>
 
-<section class="generator-section">
+<section class="hero">
+
+<h1>Create Stunning AI Art In Seconds</h1>
+
+<p>
+Transform your ideas into beautiful images using our powerful AI image generator.
+Choose styles, aspect ratios and create amazing AI artwork instantly.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#generator" class="btn btn-primary">
+Generate Now
+</a>
+
+<a href="https://www.smartaitoolsguides.site" class="btn btn-outline">
+Visit Blog
+</a>
+
+</div>
+
+</section>
+<section id="generator" style="padding:80px 0;">
 
 <div class="container">
 
-<div class="generator-grid">
+<div class="generator-wrapper">
 
-<div class="generator-card">
+<!-- Left Side -->
+
+<div class="generator-panel">
 
 <h2>Create Your Masterpiece</h2>
 
-<label class="label">
-Describe your vision
-</label>
+<label>Describe Your Vision</label>
 
 <textarea
+id="prompt"
 placeholder="Example: A futuristic city at sunset, cyberpunk style, ultra detailed, cinematic lighting">
 </textarea>
 
-<button class="generate-btn">
+<button id="generateBtn">
 ✨ Generate Artwork
 </button>
-  <!-- SELECT STYLE -->
 
-<h3 style="
-margin-top:35px;
-margin-bottom:20px;
-font-size:24px;
-">
-Select Art Style
-</h3>
+<h3>Select Art Style</h3>
 
-<div style="
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:15px;
-">
+<div class="style-grid">
 
-<div class="style-card active-style">🎨<br>Default</div>
-<div class="style-card">📷<br>Realistic</div>
-<div class="style-card">🌸<br>Anime</div>
-<div class="style-card">🖌️<br>Digital Art</div>
-<div class="style-card">🖼️<br>Watercolor</div>
-<div class="style-card">🏙️<br>Cyberpunk</div>
+<div class="style-card active" data-style="realistic">
+📷 Realistic
+</div>
+
+<div class="style-card" data-style="anime">
+🌸 Anime
+</div>
+
+<div class="style-card" data-style="digital art">
+🎨 Digital Art
+</div>
+
+<div class="style-card" data-style="fantasy">
+🏰 Fantasy
+</div>
+
+<div class="style-card" data-style="cyberpunk">
+🌃 Cyberpunk
+</div>
+
+<div class="style-card" data-style="watercolor">
+🖌 Watercolor
+</div>
 
 </div>
 
-<!-- ASPECT RATIO -->
+<h3>Aspect Ratio</h3>
 
-<h3 style="
-margin-top:35px;
-margin-bottom:20px;
-font-size:24px;
-">
-Aspect Ratio
-</h3>
+<div class="ratio-grid">
 
-<div style="
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:12px;
-">
+<div class="ratio-card active" data-ratio="square">
+1:1
+</div>
 
-<div class="ratio-box active-ratio">1:1</div>
-<div class="ratio-box">16:9</div>
-<div class="ratio-box">9:16</div>
-<div class="ratio-box">4:3</div>
-<div class="ratio-box">3:4</div>
+<div class="ratio-card" data-ratio="landscape">
+16:9
+</div>
+
+<div class="ratio-card" data-ratio="portrait">
+9:16
+</div>
+
+<div class="ratio-card" data-ratio="4:3">
+4:3
+</div>
+
+<div class="ratio-card" data-ratio="3:4">
+3:4
+</div>
 
 </div>
 
-<!-- QUALITY -->
-
-<h3 style="
-margin-top:35px;
-margin-bottom:20px;
-font-size:24px;
-">
-Quality Enhancements
-</h3>
+<h3>Quality Enhancements</h3>
 
 <textarea
+id="enhance"
 placeholder="8K, ultra detailed, cinematic lighting, masterpiece">
 </textarea>
 
 </div>
 
-<!-- RIGHT SIDE -->
+<!-- Right Side -->
 
-<div class="generator-card">
+<div class="preview-panel">
 
 <h2>Your Artwork</h2>
 
-<div class="preview-box" id="imagePreview">
+<div id="imageBox">
 
+<div id="placeholder">
+🖼️
+<br><br>
 Your AI-generated artwork will appear here
+</div>
+
+<img id="resultImage" />
 
 </div>
 
-<div class="action-buttons">
+<div class="preview-buttons">
 
-<button class="download-btn">
+<button id="downloadBtn">
 ⬇ Download
 </button>
 
-<button class="new-btn">
+<button id="newBtn">
 🔄 Create New
 </button>
 
@@ -350,371 +337,318 @@ Your AI-generated artwork will appear here
 
 <style>
 
+.generator-wrapper{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.generator-panel,
+.preview-panel{
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.generator-panel h2,
+.preview-panel h2{
+margin-bottom:25px;
+}
+
+.generator-panel label{
+display:block;
+margin-bottom:10px;
+font-weight:600;
+}
+
+.generator-panel textarea{
+width:100%;
+height:120px;
+padding:15px;
+border:1px solid #ddd;
+border-radius:12px;
+resize:none;
+margin-bottom:20px;
+font-size:15px;
+}
+
+#generateBtn{
+width:100%;
+padding:16px;
+border:none;
+border-radius:12px;
+background:linear-gradient(90deg,#7a5cff,#69a7ff);
+color:white;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+margin-bottom:30px;
+}
+
+.style-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+margin-top:15px;
+margin-bottom:30px;
+}
+
 .style-card{
-background:white;
-border:1px solid #e5e5e5;
-border-radius:16px;
-padding:20px;
+border:2px solid #eee;
+padding:18px;
+border-radius:12px;
 text-align:center;
 cursor:pointer;
 font-weight:600;
 transition:.3s;
 }
 
-.style-card:hover{
-border-color:#7b61ff;
+.style-card.active{
+border-color:#7a5cff;
+background:#f3efff;
 }
 
-.active-style{
-border:2px solid #7b61ff;
+.ratio-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:10px;
+margin:20px 0;
 }
 
-.ratio-box{
-height:70px;
+.ratio-card{
+padding:15px;
+border:2px solid #eee;
+border-radius:10px;
+text-align:center;
+cursor:pointer;
+font-weight:600;
+}
+
+.ratio-card.active{
+border-color:#7a5cff;
+background:#f3efff;
+}
+
+#imageBox{
+height:500px;
+border:2px dashed #ddd;
+border-radius:15px;
 display:flex;
 justify-content:center;
 align-items:center;
-border:1px solid #ddd;
-border-radius:14px;
-cursor:pointer;
-font-weight:600;
-background:white;
+overflow:hidden;
+background:#fafafa;
 }
 
-.active-ratio{
-border:2px solid #7b61ff;
+#placeholder{
+text-align:center;
+color:#999;
+font-size:18px;
+}
+
+#resultImage{
+max-width:100%;
+max-height:100%;
+display:none;
+}
+
+.preview-buttons{
+margin-top:25px;
+display:flex;
+gap:15px;
+}
+
+.preview-buttons button{
+flex:1;
+padding:15px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-size:16px;
+font-weight:600;
+}
+
+#downloadBtn{
+background:linear-gradient(90deg,#7a5cff,#69a7ff);
+color:white;
+}
+
+#newBtn{
+background:#f0f0f0;
+}
+
+@media(max-width:900px){
+
+.generator-wrapper{
+grid-template-columns:1fr;
+}
+
+.style-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.ratio-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
 }
 
 </style>
-  <!-- LATEST ARTICLES -->
+<script>
 
-<section style="padding:80px 0;">
+let selectedStyle = "realistic";
+let selectedRatio = "square";
 
-<div class="container">
+const styleCards = document.querySelectorAll(".style-card");
+const ratioCards = document.querySelectorAll(".ratio-card");
 
-<h2 style="
-text-align:center;
-font-size:48px;
-margin-bottom:15px;
-font-weight:700;
-color:#222;
-">
+styleCards.forEach(card=>{
 
-Latest Articles
+card.addEventListener("click",()=>{
 
-</h2>
+styleCards.forEach(c=>c.classList.remove("active"));
 
-<p style="
-text-align:center;
-max-width:700px;
-margin:auto;
-color:#777;
-line-height:1.8;
-margin-bottom:50px;
-">
+card.classList.add("active");
 
-Discover powerful AI tools, tutorials, image editing resources, and practical guides designed to help creators and businesses grow.
+selectedStyle = card.dataset.style;
 
-</p>
+});
 
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
-">
+});
 
-<!-- ARTICLE 1 -->
+ratioCards.forEach(card=>{
 
-<div style="
-background:white;
-border-radius:22px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,.05);
-">
+card.addEventListener("click",()=>{
 
-<img
-src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200"
-style="width:100%;height:220px;object-fit:cover;">
+ratioCards.forEach(c=>c.classList.remove("active"));
 
-<div style="padding:25px;">
+card.classList.add("active");
 
-<span style="
-background:#f0ebff;
-color:#7b61ff;
-padding:6px 12px;
-border-radius:20px;
-font-size:13px;
-font-weight:600;
-">
+selectedRatio = card.dataset.ratio;
 
-Image Tools
+});
 
-</span>
+});
 
-<h3 style="
-margin-top:18px;
-margin-bottom:15px;
-font-size:24px;
-">
+const generateBtn=document.getElementById("generateBtn");
+const resultImage=document.getElementById("resultImage");
+const placeholder=document.getElementById("placeholder");
+const downloadBtn=document.getElementById("downloadBtn");
+const newBtn=document.getElementById("newBtn");
 
-Image Resizer Tool
+generateBtn.addEventListener("click",()=>{
 
-</h3>
+const prompt=document.getElementById("prompt").value.trim();
 
-<p style="
-color:#666;
-line-height:1.8;
-margin-bottom:20px;
-">
+const enhance=document.getElementById("enhance").value.trim();
 
-Learn how to resize images without losing quality for websites, blogs and social media.
+if(!prompt){
 
-</p>
+alert("Please enter a prompt");
 
-<a href="article1.html"
-style="
-display:inline-block;
-padding:12px 20px;
-background:#7b61ff;
-color:white;
-text-decoration:none;
-border-radius:12px;
-font-weight:600;
-">
+return;
 
-Read Article
+}
 
-</a>
+generateBtn.innerHTML="Generating...";
 
-</div>
+let width=1024;
+let height=1024;
 
-</div>
+if(selectedRatio==="landscape"){
+width=1280;
+height=720;
+}
 
-<!-- ARTICLE 2 -->
+if(selectedRatio==="portrait"){
+width=720;
+height=1280;
+}
 
-<div style="
-background:white;
-border-radius:22px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,.05);
-">
+if(selectedRatio==="4:3"){
+width=1024;
+height=768;
+}
 
-<img
-src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200"
-style="width:100%;height:220px;object-fit:cover;">
+if(selectedRatio==="3:4"){
+width=768;
+height=1024;
+}
 
-<div style="padding:25px;">
+const finalPrompt=
+prompt+
+", "+
+selectedStyle+
+", "+
+enhance+
+", ultra detailed, masterpiece, high quality";
 
-<span style="
-background:#f0ebff;
-color:#7b61ff;
-padding:6px 12px;
-border-radius:20px;
-font-size:13px;
-font-weight:600;
-">
+const imageUrl=
+"https://image.pollinations.ai/prompt/"
++
+encodeURIComponent(finalPrompt)
++
+"?width="+width+
+"&height="+height+
+"&seed="+Date.now();
 
-AI Tools
+resultImage.style.display="none";
 
-</span>
+placeholder.innerHTML="Generating Image...";
 
-<h3 style="
-margin-top:18px;
-margin-bottom:15px;
-font-size:24px;
-">
+resultImage.onload=function(){
 
-AI Image Upscaler
+placeholder.style.display="none";
 
-</h3>
+resultImage.style.display="block";
 
-<p style="
-color:#666;
-line-height:1.8;
-margin-bottom:20px;
-">
+generateBtn.innerHTML="✨ Generate Artwork";
 
-Enhance image quality and resolution using advanced AI upscaling technology.
+};
 
-</p>
+resultImage.src=imageUrl;
 
-<a href="article2.html"
-style="
-display:inline-block;
-padding:12px 20px;
-background:#7b61ff;
-color:white;
-text-decoration:none;
-border-radius:12px;
-font-weight:600;
-">
+});
 
-Read Article
+downloadBtn.addEventListener("click",()=>{
 
-</a>
+if(!resultImage.src){
 
-</div>
+alert("Generate image first");
 
-</div>
+return;
 
-<!-- ARTICLE 3 -->
+}
 
-<div style="
-background:white;
-border-radius:22px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,.05);
-">
+const a=document.createElement("a");
 
-<img
-src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200"
-style="width:100%;height:220px;object-fit:cover;">
+a.href=resultImage.src;
 
-<div style="padding:25px;">
+a.download="smart-ai-tools-guides-image.png";
 
-<span style="
-background:#f0ebff;
-color:#7b61ff;
-padding:6px 12px;
-border-radius:20px;
-font-size:13px;
-font-weight:600;
-">
+document.body.appendChild(a);
 
-Branding
+a.click();
 
-</span>
+document.body.removeChild(a);
 
-<h3 style="
-margin-top:18px;
-margin-bottom:15px;
-font-size:24px;
-">
+});
 
-Image Watermark Tool
+newBtn.addEventListener("click",()=>{
 
-</h3>
+document.getElementById("prompt").value="";
 
-<p style="
-color:#666;
-line-height:1.8;
-margin-bottom:20px;
-">
+document.getElementById("enhance").value="";
 
-Protect your images with custom watermarks and strengthen your brand identity.
+resultImage.style.display="none";
 
-</p>
+placeholder.style.display="block";
 
-<a href="article3.html"
-style="
-display:inline-block;
-padding:12px 20px;
-background:#7b61ff;
-color:white;
-text-decoration:none;
-border-radius:12px;
-font-weight:600;
-">
+placeholder.innerHTML="🖼️<br><br>Your AI-generated artwork will appear here";
 
-Read Article
+});
 
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer style="
-background:#243b63;
-color:white;
-padding:60px 0;
-margin-top:60px;
-">
-
-<div class="container">
-
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:40px;
-">
-
-<div>
-
-<h3 style="margin-bottom:20px;">
-Smart AI Tools Guides
-</h3>
-
-<p style="line-height:1.9;color:#d7d7d7;">
-Powerful AI image tools, educational resources and practical guides for creators and professionals.
-</p>
-
-</div>
-
-<div>
-
-<h3 style="margin-bottom:20px;">
-Features
-</h3>
-
-<p>AI Image Generator</p>
-<p>Image Tools</p>
-<p>AI Resources</p>
-
-</div>
-
-<div>
-
-<h3 style="margin-bottom:20px;">
-Resources
-</h3>
-
-<p><a href="blog.html" style="color:white;text-decoration:none;">Blog</a></p>
-<p><a href="about.html" style="color:white;text-decoration:none;">About</a></p>
-<p><a href="contact.html" style="color:white;text-decoration:none;">Contact</a></p>
-
-</div>
-
-<div>
-
-<h3 style="margin-bottom:20px;">
-Legal
-</h3>
-
-<p><a href="privacy.html" style="color:white;text-decoration:none;">Privacy Policy</a></p>
-<p><a href="terms.html" style="color:white;text-decoration:none;">Terms of Use</a></p>
-
-</div>
-
-</div>
-
-<hr style="
-margin:40px 0 20px;
-border:none;
-height:1px;
-background:rgba(255,255,255,.15);
-">
-
-<p style="
-text-align:center;
-color:#d7d7d7;
-">
-
-© 2026 Smart AI Tools Guides. All Rights Reserved.
-
-</p>
-
-</div>
-
-</footer>
-
+</script>
 </body>
 </html>
