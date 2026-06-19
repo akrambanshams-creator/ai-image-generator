@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Resizer Tool - Smart AI Tools Guides</title>
+
+<meta name="description" content="Resize images online quickly and easily with our free Image Resizer Tool. Adjust dimensions without losing quality.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f8f9ff;
+color:#222;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+a{
+text-decoration:none;
+}
+
+/* HEADER */
+
+header{
+background:#fff;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+background:linear-gradient(90deg,#6a5cff,#9f55ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+color:#222;
+font-weight:500;
+}
+
+.nav-links a:hover{
+color:#6a5cff;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(135deg,#6a5cff,#8f5cff);
+color:white;
+text-align:center;
+padding:100px 20px;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:850px;
+margin:auto;
+font-size:20px;
+line-height:1.8;
+}
+
+/* TOOL SECTION */
+
+.tool-section{
+padding:80px 0;
+}
+
+.tool-box{
+background:white;
+padding:40px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.tool-box h2{
+text-align:center;
+margin-bottom:30px;
+font-size:32px;
+}
+
+.upload-area{
+border:2px dashed #6a5cff;
+padding:40px;
+text-align:center;
+border-radius:15px;
+margin-bottom:25px;
+}
+
+.upload-area input{
+margin-top:15px;
+}
+
+.controls{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+margin-bottom:25px;
+}
+
+.controls input{
+padding:15px;
+border:1px solid #ddd;
+border-radius:10px;
+font-size:16px;
+}
+
+.btn{
+background:#6a5cff;
+color:white;
+border:none;
+padding:15px 30px;
+border-radius:10px;
+cursor:pointer;
+font-size:16px;
+font-weight:600;
+}
+
+.preview{
+margin-top:30px;
+text-align:center;
+}
+
+.preview img{
+max-width:100%;
+border-radius:15px;
+display:none;
+}
+
+/* ARTICLE INTRO */
+
+.article-intro{
+padding:60px 0;
+}
+
+.article-card{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.article-card h2{
+margin-bottom:20px;
+font-size:34px;
+}
+
+.article-card p{
+line-height:2;
+color:#555;
+margin-bottom:20px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.controls{
+grid-template-columns:1fr;
+}
+
+.nav-links{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="container navbar">
+
+<div class="logo">
+Smart AI Tools Guides
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy Policy</a>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<h1>Image Resizer Tool</h1>
+
+<p>
+Resize images online quickly and efficiently while maintaining excellent image quality. Perfect for websites, social media, blogs, and professional projects.
+</p>
+
+</section>
+
+<section class="tool-section">
+
+<div class="container">
+
+<div class="tool-box">
+
+<h2>Free Image Resizer Tool</h2>
+
+<div class="upload-area">
+
+<p>Select an image to begin resizing</p>
+
+<input type="file" id="imageInput" accept="image/*">
+
+</div>
+
+<div class="controls">
+
+<input type="number" id="width" placeholder="Width (px)">
+
+<input type="number" id="height" placeholder="Height (px)">
+
+</div>
+
+<button class="btn" id="resizeBtn">
+Resize Image
+</button>
+
+<div class="preview">
+
+<img id="previewImage">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="article-intro">
+
+<div class="container">
+
+<div class="article-card">
+
+<h2>Resize Images Online Without Losing Quality</h2>
+
+<p>
+An image resizer tool helps users adjust image dimensions for websites, blogs, social media platforms, presentations, and digital projects. Proper image sizing improves loading speed, user experience, and overall website performance.
+</p>
+
+<p>
+Whether you are a blogger, designer, student, marketer, or business owner, using the correct image dimensions can significantly improve visual presentation and online performance.
+</p>
+
+</div>
+
+</div>
+
+</section>
+<script>
+
+const imageInput = document.getElementById('imageInput');
+const previewImage = document.getElementById('previewImage');
+const resizeBtn = document.getElementById('resizeBtn');
+
+let uploadedImage = null;
+
+imageInput.addEventListener('change', function(e){
+
+const file = e.target.files[0];
+
+if(!file) return;
+
+const reader = new FileReader();
+
+reader.onload = function(event){
+
+uploadedImage = new Image();
+
+uploadedImage.onload = function(){
+
+previewImage.src = event.target.result;
+previewImage.style.display = 'block';
+
+};
+
+uploadedImage.src = event.target.result;
+
+};
+
+reader.readAsDataURL(file);
+
+});
+
+resizeBtn.addEventListener('click', function(){
+
+if(!uploadedImage){
+
+alert('Please upload an image first.');
+return;
+
+}
+
+const width =
+parseInt(document.getElementById('width').value);
+
+const height =
+parseInt(document.getElementById('height').value);
+
+if(!width || !height){
+
+alert('Please enter width and height.');
+return;
+
+}
+
+const canvas = document.createElement('canvas');
+
+canvas.width = width;
+canvas.height = height;
+
+const ctx = canvas.getContext('2d');
+
+ctx.drawImage(
+uploadedImage,
+0,
+0,
+width,
+height
+);
+
+const resizedImage =
+canvas.toDataURL('image/png');
+
+previewImage.src = resizedImage;
+
+const downloadLink =
+document.createElement('a');
+
+downloadLink.href = resizedImage;
+
+downloadLink.download =
+'resized-image.png';
+
+downloadLink.innerHTML =
+'<br><br><button class="btn">Download Image</button>';
+
+const preview =
+document.querySelector('.preview');
+
+const existing =
+preview.querySelector('a');
+
+if(existing){
+
+existing.remove();
+
+}
+
+preview.appendChild(downloadLink);
+
+});
+
+</script>
+<section class="article-intro">
+
+<div class="container">
+
+<div class="article-card">
+
+<h2>Why Image Resizing Matters</h2>
+
+<p>
+Image resizing plays an essential role in modern web design, content creation, digital marketing, and social media management. Large image files can slow down websites, negatively affect user experience, and reduce search engine performance. Properly resized images help improve loading speed and overall website efficiency.
+</p>
+
+<p>
+Whether you manage a blog, online store, portfolio website, or social media account, optimized image dimensions ensure better visual presentation and improved compatibility across devices.
+</p>
+
+<h2>Key Features of Our Image Resizer Tool</h2>
+
+<p>
+✔ Fast online image resizing.<br>
+✔ Easy-to-use interface.<br>
+✔ Instant image preview.<br>
+✔ Custom width and height controls.<br>
+✔ Download resized images instantly.<br>
+✔ Mobile-friendly design.<br>
+✔ No software installation required.
+</p>
+
+<h2>How To Use The Tool</h2>
+
+<p>
+Using the Image Resizer Tool is simple:
+</p>
+
+<p>
+1. Upload your image.<br>
+2. Enter your desired width.<br>
+3. Enter your desired height.<br>
+4. Click the Resize Image button.<br>
+5. Preview the resized image.<br>
+6. Download the optimized version.
+</p>
+
+<h2>Benefits Of Image Optimization</h2>
+
+<p>
+Proper image optimization provides several benefits:
+</p>
+
+<p>
+• Faster website loading times.<br>
+• Improved SEO performance.<br>
+• Better mobile experience.<br>
+• Reduced storage usage.<br>
+• Enhanced user engagement.<br>
+• Improved page speed scores.
+</p>
+
+<h2>Best Practices For Resizing Images</h2>
+
+<p>
+When resizing images, it is important to maintain aspect ratio whenever possible. Using dimensions that match the intended platform helps avoid distortion and quality loss. Always choose image sizes appropriate for the device and purpose.
+</p>
+
+<p>
+For websites, smaller optimized images generally perform better than oversized files. Social media platforms often provide recommended dimensions that help maintain visual quality.
+</p>
+
+<h2>Common Mistakes To Avoid</h2>
+
+<p>
+Many users resize images without considering image quality, aspect ratio, or file format. Common mistakes include:
+</p>
+
+<p>
+• Using excessively large dimensions.<br>
+• Distorting image proportions.<br>
+• Uploading unoptimized images.<br>
+• Ignoring mobile compatibility.<br>
+• Using incorrect image formats.
+</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<p><strong>What is an Image Resizer Tool?</strong><br>
+An Image Resizer Tool allows users to change image dimensions while preparing images for different digital platforms.</p>
+
+<p><strong>Can I resize images for free?</strong><br>
+Yes. This tool is available for free and can be used directly from your browser.</p>
+
+<p><strong>Will resizing affect image quality?</strong><br>
+Quality depends on the resizing method and dimensions selected. Moderate resizing usually preserves good quality.</p>
+
+<p><strong>Can I use the tool on mobile devices?</strong><br>
+Yes. The tool is fully responsive and works on smartphones and tablets.</p>
+
+<p><strong>Which image formats are supported?</strong><br>
+Most common image formats such as JPG, PNG, and WEBP can be used.</p>
+
+<h2>Conclusion</h2>
+
+<p>
+An Image Resizer Tool is one of the most useful utilities for website owners, bloggers, designers, marketers, and content creators. Properly resized images improve performance, user experience, and visual quality across multiple platforms.
+</p>
+
+<p>
+Our free Image Resizer Tool makes it easy to resize images online quickly and efficiently. Upload your image, choose the desired dimensions, and download the optimized version within seconds.
+</p>
+
+</div>
+
+</div>
+
+</section>
+</body>
+</html>
