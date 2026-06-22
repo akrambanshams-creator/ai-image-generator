@@ -5,9 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AI Tools Guides & Resources</title>
+<title>AI Tools Blog | Smart AI Tools Guides</title>
 
-<meta name="description" content="Explore AI tools, image tools, tutorials, case studies, and practical guides designed for creators, marketers, bloggers, and businesses.">
+<meta name="description" content="Explore expert AI tool guides, startup case studies, image utilities, tutorials, and practical resources for creators, marketers, bloggers, and businesses.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,12 +22,16 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 font-family:'Poppins',sans-serif;
 background:#f5f6fa;
 color:#333;
-line-height:1.7;
 overflow-x:hidden;
+line-height:1.8;
 }
 
 a{
@@ -50,25 +54,24 @@ padding:0 20px;
 
 .navbar{
 background:#fff;
-padding:18px 0;
-box-shadow:0 2px 20px rgba(0,0,0,.05);
 position:sticky;
 top:0;
 z-index:999;
+box-shadow:0 2px 15px rgba(0,0,0,.05);
 }
 
 .nav-content{
 display:flex;
 justify-content:space-between;
 align-items:center;
-flex-wrap:wrap;
-gap:15px;
+padding:20px 0;
+gap:20px;
 }
 
 .logo{
 font-size:1.8rem;
 font-weight:800;
-background:linear-gradient(135deg,#5d4fff,#8c52ff);
+background:linear-gradient(135deg,#5d4fff,#8b5cff);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
@@ -92,104 +95,110 @@ color:#6c5cff;
 /* HERO */
 
 .hero{
-background:linear-gradient(135deg,#5d4fff,#8a5cff);
-padding:90px 20px;
+background:linear-gradient(135deg,#5d4fff,#8b5cff);
+padding:100px 20px;
 text-align:center;
-color:white;
+color:#fff;
 }
 
 .hero h1{
-font-size:clamp(2.4rem,5vw,4.5rem);
+font-size:clamp(2.5rem,5vw,4.5rem);
 font-weight:800;
-line-height:1.15;
+line-height:1.2;
 max-width:900px;
 margin:auto;
 }
 
 .hero p{
-max-width:800px;
-margin:25px auto;
-font-size:1.1rem;
+max-width:850px;
+margin:25px auto 0;
+font-size:1.15rem;
 opacity:.95;
 }
 
-/* STATS */
+/* FEATURED */
 
-.stats{
-margin-top:-40px;
+.featured{
+margin-top:-70px;
 position:relative;
 z-index:10;
 }
 
-.stats-grid{
+.featured-card{
+background:#fff;
+border-radius:30px;
+overflow:hidden;
+box-shadow:0 20px 60px rgba(0,0,0,.08);
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
+grid-template-columns:1fr 1fr;
+align-items:center;
 }
 
-.stat-card{
-background:white;
-padding:25px;
-text-align:center;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.06);
+.featured-image img{
+height:100%;
+object-fit:cover;
 }
 
-.stat-card h3{
-font-size:2rem;
+.featured-content{
+padding:50px;
+}
+
+.featured-badge{
+display:inline-block;
+padding:8px 16px;
+background:#efeaff;
 color:#6c5cff;
-margin-bottom:5px;
+font-size:.85rem;
+font-weight:700;
+border-radius:30px;
+margin-bottom:20px;
 }
 
-.stat-card p{
+.featured-content h2{
+font-size:2.2rem;
+line-height:1.3;
+margin-bottom:15px;
+}
+
+.featured-content p{
 color:#666;
-font-size:.95rem;
+margin-bottom:25px;
 }
 
-/* SECTION TITLE */
+.featured-meta{
+display:flex;
+gap:15px;
+font-size:.9rem;
+color:#888;
+margin-bottom:25px;
+}
+
+.featured-btn{
+display:inline-block;
+padding:14px 24px;
+border-radius:14px;
+background:linear-gradient(135deg,#5d4fff,#8b5cff);
+color:#fff;
+font-weight:600;
+}
+
+/* SECTION HEADER */
 
 .section-header{
 text-align:center;
-margin:70px 0 40px;
+margin:90px 0 50px;
 }
 
 .section-header h2{
-font-size:2.5rem;
-color:#333;
+font-size:3rem;
 font-weight:800;
+margin-bottom:15px;
 }
 
 .section-header p{
-margin-top:12px;
-color:#666;
 max-width:700px;
-margin-left:auto;
-margin-right:auto;
-}
-
-/* FILTERS */
-
-.filters{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:12px;
-margin-bottom:50px;
-}
-
-.filter-btn{
-padding:12px 20px;
-border-radius:30px;
-font-weight:600;
-background:white;
-border:1px solid #eee;
-cursor:pointer;
-transition:.3s;
-}
-
-.filter-btn:hover{
-background:#6c5cff;
-color:white;
+margin:auto;
+color:#666;
 }
 
 /* ARTICLES GRID */
@@ -202,10 +211,10 @@ margin-bottom:80px;
 }
 
 .article-card{
-background:white;
-border-radius:24px;
+background:#fff;
+border-radius:25px;
 overflow:hidden;
-box-shadow:0 10px 35px rgba(0,0,0,.07);
+box-shadow:0 10px 35px rgba(0,0,0,.06);
 transition:.35s;
 }
 
@@ -215,7 +224,7 @@ box-shadow:0 20px 50px rgba(0,0,0,.12);
 }
 
 .article-image{
-height:230px;
+height:240px;
 overflow:hidden;
 }
 
@@ -236,7 +245,7 @@ padding:25px;
 
 .badge{
 display:inline-block;
-padding:8px 14px;
+padding:7px 14px;
 border-radius:30px;
 font-size:.8rem;
 font-weight:700;
@@ -244,131 +253,70 @@ margin-bottom:15px;
 }
 
 .case-study{
-background:#fff0d8;
-color:#c67a00;
+background:#fff3db;
+color:#c77a00;
 }
 
 .ai-tools{
-background:#efe8ff;
+background:#ebe7ff;
 color:#6c5cff;
 }
 
 .image-tools{
-background:#e7f6ff;
-color:#0084ff;
-}
-
-.meta{
-display:flex;
-gap:15px;
-font-size:.85rem;
-color:#777;
-margin-bottom:15px;
+background:#e7fff2;
+color:#00a86b;
 }
 
 .article-content h3{
 font-size:1.45rem;
 line-height:1.4;
-margin-bottom:15px;
+margin-bottom:12px;
 }
 
 .article-content p{
 color:#666;
+margin-bottom:18px;
+}
+
+.meta{
+display:flex;
+justify-content:space-between;
+font-size:.85rem;
+color:#888;
 margin-bottom:20px;
 }
 
 .read-btn{
 display:inline-block;
 padding:12px 22px;
-background:linear-gradient(135deg,#5d4fff,#8a5cff);
-color:white;
 border-radius:12px;
+background:linear-gradient(135deg,#5d4fff,#8b5cff);
+color:#fff;
 font-weight:600;
 }
 
-.read-btn:hover{
-opacity:.9;
+/* MOBILE */
+
+@media(max-width:900px){
+
+.featured-card{
+grid-template-columns:1fr;
 }
 
-/* CTA */
-
-.cta{
-background:linear-gradient(135deg,#5d4fff,#8a5cff);
-padding:70px 30px;
-border-radius:30px;
-text-align:center;
-color:white;
-margin-bottom:80px;
+.featured-content{
+padding:30px;
 }
-
-.cta h2{
-font-size:2.5rem;
-margin-bottom:15px;
-}
-
-.cta p{
-max-width:700px;
-margin:auto;
-margin-bottom:25px;
-}
-
-.cta-btn{
-display:inline-block;
-background:white;
-color:#6c5cff;
-padding:15px 28px;
-font-weight:700;
-border-radius:14px;
-}
-
-/* FOOTER */
-
-.footer{
-background:#0f1117;
-padding:60px 0;
-color:white;
-}
-
-.footer-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
-.footer h3{
-margin-bottom:15px;
-}
-
-.footer a{
-display:block;
-color:#d4d4d4;
-margin-bottom:10px;
-}
-
-.footer a:hover{
-color:white;
-}
-
-.footer p{
-color:#cfcfcf;
-}
-
-@media(max-width:768px){
 
 .hero{
-padding:70px 20px;
+padding:80px 20px;
 }
 
 .hero h1{
-font-size:2.4rem;
+font-size:2.7rem;
 }
 
 .section-header h2{
-font-size:2rem;
-}
-
-.cta h2{
-font-size:2rem;
+font-size:2.2rem;
 }
 
 }
@@ -388,13 +336,11 @@ Smart AI Tools Guides
 </div>
 
 <div class="nav-links">
-
 <a href="index.html">Home</a>
 <a href="blog.html">Blog</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
 <a href="privacy.html">Privacy Policy</a>
-
 </div>
 
 </div>
@@ -405,42 +351,53 @@ Smart AI Tools Guides
 
 <div class="container">
 
-<h1>
-AI Tools Guides & Expert Resources
-</h1>
+<h1>AI Tools Guides, Tutorials & Startup Stories</h1>
 
 <p>
-Explore detailed AI tool reviews, image utilities, practical tutorials, case studies, and professional guides designed to help creators, bloggers, marketers, and businesses grow faster.
+Discover expert AI guides, image tool tutorials, startup case studies,
+and practical resources designed to help creators, marketers, bloggers,
+and businesses grow faster.
 </p>
 
 </div>
 
 </section>
 
-<section class="stats">
+<section class="featured">
 
 <div class="container">
 
-<div class="stats-grid">
+<div class="featured-card">
 
-<div class="stat-card">
-<h3>3+</h3>
-<p>Published Articles</p>
+<div class="featured-image">
+<img src="images/article1-cover.webp" alt="Featured Article">
 </div>
 
-<div class="stat-card">
-<h3>20+</h3>
-<p>AI Tool Ideas</p>
+<div class="featured-content">
+
+<span class="featured-badge">
+Featured Case Study
+</span>
+
+<h2>
+How I Built an AI Image Generator and Turned It Into a Profitable Project
+</h2>
+
+<p>
+A complete behind-the-scenes case study showing how an AI image generator
+evolved from an idea into a real digital product.
+</p>
+
+<div class="featured-meta">
+<span>June 2026</span>
+<span>•</span>
+<span>15 Min Read</span>
 </div>
 
-<div class="stat-card">
-<h3>100%</h3>
-<p>Free Resources</p>
-</div>
+<a href="article1.html" class="featured-btn">
+Read Full Story
+</a>
 
-<div class="stat-card">
-<h3>2026</h3>
-<p>Latest Updates</p>
 </div>
 
 </div>
@@ -453,24 +410,154 @@ Explore detailed AI tool reviews, image utilities, practical tutorials, case stu
 
 <div class="section-header">
 
-<h2>
-Latest Articles
-</h2>
+<h2>Latest Articles</h2>
 
 <p>
-Discover practical AI guides, tool comparisons, startup case studies, and image utility tutorials.
+Explore the latest tutorials, image tools, startup stories,
+comparisons, and AI resources.
 </p>
 
 </div>
 
-<div class="filters">
+<div class="articles-grid">
+  <!-- ARTICLE 1 -->
 
-<button class="filter-btn">All</button>
-<button class="filter-btn">Case Study</button>
-<button class="filter-btn">AI Tools</button>
-<button class="filter-btn">Image Tools</button>
+<div class="article-card">
+
+<div class="article-image">
+<img src="images/article1-cover.webp" alt="How I Built an AI Image Generator">
+</div>
+
+<div class="article-content">
+
+<span class="badge case-study">
+Case Study
+</span>
+
+<div class="meta">
+<span>June 2026</span>
+<span>15 Min Read</span>
+</div>
+
+<h3>
+How I Built an AI Image Generator and Turned It Into a Profitable Project
+</h3>
+
+<p>
+A complete startup journey covering planning, development,
+AI integration, monetization, SEO growth, and lessons learned.
+</p>
+
+<a href="article1.html" class="read-btn">
+Read Article
+</a>
 
 </div>
+
+</div>
+
+<!-- ARTICLE 2 -->
+
+<div class="article-card">
+
+<div class="article-image">
+<img src="images/article2-cover.webp" alt="Top AI Image Generators">
+</div>
+
+<div class="article-content">
+
+<span class="badge ai-tools">
+AI Tools
+</span>
+
+<div class="meta">
+<span>June 2026</span>
+<span>12 Min Read</span>
+</div>
+
+<h3>
+Top 5 AI Image Generators in 2026: Complete Comparison Guide
+</h3>
+
+<p>
+Compare Midjourney, DALL·E, Firefly, Leonardo AI,
+and Ideogram to discover which platform best fits your needs.
+</p>
+
+<a href="article2.html" class="read-btn">
+Read Article
+</a>
+
+</div>
+
+</div>
+
+<!-- ARTICLE 3 -->
+
+<div class="article-card">
+
+<div class="article-image">
+<img src="images/article3-cover.webp" alt="Image Watermark Tool Guide">
+</div>
+
+<div class="article-content">
+
+<span class="badge image-tools">
+Image Tools
+</span>
+
+<div class="meta">
+<span>June 2026</span>
+<span>10 Min Read</span>
+</div>
+
+<h3>
+AI Image Watermark Tool: The Complete Guide to Protecting Images and Building Your Brand
+</h3>
+
+<p>
+Learn how watermarking protects digital assets,
+improves branding, prevents content theft,
+and increases online visibility.
+</p>
+
+<a href="article3.html" class="read-btn">
+Read Article
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA SECTION -->
+
+<section class="container">
+
+<div class="cta">
+
+<h2>
+Explore More AI Resources
+</h2>
+
+<p>
+Discover powerful AI tools, image utilities,
+tutorials, startup stories, and practical guides
+designed to help creators and businesses grow faster.
+</p>
+
+<a href="index.html" class="cta-btn">
+Explore AI Tools
+</a>
+
+</div>
+
+</section>
+<!-- FOOTER -->
+
 <footer class="footer">
 
 <div class="container">
@@ -481,14 +568,13 @@ Discover practical AI guides, tool comparisons, startup case studies, and image 
 
 <div>
 
-<h3>
-Smart AI Tools Guides
-</h3>
+<h3>Smart AI Tools Guides</h3>
 
 <p>
-
-Discover powerful AI tools, image utilities, productivity resources, and practical guides designed to help creators, marketers, bloggers, developers, and businesses work smarter.
-
+Discover powerful AI tools, image utilities,
+productivity resources, tutorials, and practical
+guides designed to help creators, bloggers,
+developers, marketers, and businesses grow faster.
 </p>
 
 </div>
@@ -497,16 +583,11 @@ Discover powerful AI tools, image utilities, productivity resources, and practic
 
 <div>
 
-<h3>
-Quick Links
-</h3>
+<h3>Quick Links</h3>
 
 <a href="index.html">Home</a>
-
 <a href="blog.html">Blog</a>
-
 <a href="about.html">About</a>
-
 <a href="contact.html">Contact</a>
 
 </div>
@@ -515,12 +596,9 @@ Quick Links
 
 <div>
 
-<h3>
-Legal
-</h3>
+<h3>Legal</h3>
 
 <a href="privacy.html">Privacy Policy</a>
-
 <a href="privacy.html">Terms & Conditions</a>
 
 </div>
@@ -529,38 +607,27 @@ Legal
 
 <div>
 
-<h3>
-Resources
-</h3>
+<h3>Featured Articles</h3>
 
 <a href="article1.html">
-AI Startup Case Study
+How I Built an AI Image Generator
 </a>
 
 <a href="article2.html">
-Top AI Image Generators
+Top 5 AI Image Generators in 2026
 </a>
 
 <a href="article3.html">
-Image Watermark Guide
+AI Image Watermark Tool Guide
 </a>
 
 </div>
 
 </div>
 
-<hr style="
-margin:40px 0 25px;
-border:none;
-height:1px;
-background:rgba(255,255,255,.1);
-">
+<hr class="footer-line">
 
-<div style="
-text-align:center;
-color:#bdbdbd;
-font-size:.95rem;
-">
+<div class="copyright">
 
 © 2026 Smart AI Tools Guides.
 All Rights Reserved.
@@ -571,7 +638,59 @@ All Rights Reserved.
 
 </footer>
 
-</section>
+<style>
+
+/* FOOTER */
+
+.footer{
+background:#0d1020;
+padding:70px 0 40px;
+color:#fff;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:40px;
+}
+
+.footer h3{
+margin-bottom:18px;
+font-size:1.2rem;
+font-weight:700;
+}
+
+.footer p{
+color:#bfc4d6;
+line-height:1.9;
+}
+
+.footer a{
+display:block;
+margin-bottom:12px;
+color:#bfc4d6;
+transition:.3s;
+}
+
+.footer a:hover{
+color:#ffffff;
+padding-left:6px;
+}
+
+.footer-line{
+margin:40px 0 25px;
+border:none;
+height:1px;
+background:rgba(255,255,255,.12);
+}
+
+.copyright{
+text-align:center;
+color:#bfc4d6;
+font-size:.95rem;
+}
+
+</style>
 
 </body>
 </html>
