@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Blog - Smart AI Tools Guides</title>
+<title>AI Tools Guides & Resources</title>
 
-<meta name="description"
-content="Explore AI tools, tutorials, image utilities, and productivity resources.">
+<meta name="description" content="Explore AI tools, image tools, tutorials, case studies, and practical guides designed for creators, marketers, bloggers, and businesses.">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -17,109 +20,202 @@ content="Explore AI tools, tutorials, image utilities, and productivity resource
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#f5f6fb;
-color:#222;
+font-family:'Poppins',sans-serif;
+background:#f5f6fa;
+color:#333;
+line-height:1.7;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+}
+
+img{
+max-width:100%;
+display:block;
 }
 
 .container{
-width:90%;
+width:100%;
 max-width:1200px;
 margin:auto;
+padding:0 20px;
 }
 
-/* HEADER */
-
-header{
-background:#fff;
-box-shadow:0 2px 12px rgba(0,0,0,.05);
-position:sticky;
-top:0;
-z-index:1000;
-}
+/* NAVBAR */
 
 .navbar{
+background:#fff;
+padding:18px 0;
+box-shadow:0 2px 20px rgba(0,0,0,.05);
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.nav-content{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px 0;
+flex-wrap:wrap;
+gap:15px;
 }
 
 .logo{
-font-size:28px;
-font-weight:700;
-background:linear-gradient(90deg,#6a5cff,#9f55ff);
+font-size:1.8rem;
+font-weight:800;
+background:linear-gradient(135deg,#5d4fff,#8c52ff);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
 .nav-links{
 display:flex;
-gap:30px;
+gap:25px;
+flex-wrap:wrap;
 }
 
 .nav-links a{
-text-decoration:none;
-color:#333;
+color:#444;
 font-weight:500;
 transition:.3s;
 }
 
 .nav-links a:hover{
-color:#6a5cff;
+color:#6c5cff;
 }
 
-/* BLOG TITLE */
+/* HERO */
 
-.blog-header{
-padding:70px 20px 50px;
+.hero{
+background:linear-gradient(135deg,#5d4fff,#8a5cff);
+padding:90px 20px;
 text-align:center;
+color:white;
 }
 
-.blog-header h1{
-font-size:60px;
-font-weight:700;
-color:#6a5cff;
-margin-bottom:15px;
-}
-
-.blog-header p{
-font-size:18px;
-color:#777;
-max-width:750px;
+.hero h1{
+font-size:clamp(2.4rem,5vw,4.5rem);
+font-weight:800;
+line-height:1.15;
+max-width:900px;
 margin:auto;
-line-height:1.8;
+}
+
+.hero p{
+max-width:800px;
+margin:25px auto;
+font-size:1.1rem;
+opacity:.95;
+}
+
+/* STATS */
+
+.stats{
+margin-top:-40px;
+position:relative;
+z-index:10;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
+.stat-card{
+background:white;
+padding:25px;
+text-align:center;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+.stat-card h3{
+font-size:2rem;
+color:#6c5cff;
+margin-bottom:5px;
+}
+
+.stat-card p{
+color:#666;
+font-size:.95rem;
+}
+
+/* SECTION TITLE */
+
+.section-header{
+text-align:center;
+margin:70px 0 40px;
+}
+
+.section-header h2{
+font-size:2.5rem;
+color:#333;
+font-weight:800;
+}
+
+.section-header p{
+margin-top:12px;
+color:#666;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* FILTERS */
+
+.filters{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:12px;
+margin-bottom:50px;
+}
+
+.filter-btn{
+padding:12px 20px;
+border-radius:30px;
+font-weight:600;
+background:white;
+border:1px solid #eee;
+cursor:pointer;
+transition:.3s;
+}
+
+.filter-btn:hover{
+background:#6c5cff;
+color:white;
 }
 
 /* ARTICLES GRID */
 
-.blog-section{
-padding-bottom:80px;
-}
-
-.blog-grid{
+.articles-grid{
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:30px;
+margin-bottom:80px;
 }
 
 .article-card{
-background:#fff;
-border-radius:22px;
+background:white;
+border-radius:24px;
 overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-transition:.3s;
+box-shadow:0 10px 35px rgba(0,0,0,.07);
+transition:.35s;
 }
 
 .article-card:hover{
-transform:translateY(-8px);
+transform:translateY(-10px);
+box-shadow:0 20px 50px rgba(0,0,0,.12);
 }
 
 .article-image{
-height:220px;
+height:230px;
 overflow:hidden;
 }
 
@@ -127,69 +223,165 @@ overflow:hidden;
 width:100%;
 height:100%;
 object-fit:cover;
+transition:.5s;
+}
+
+.article-card:hover .article-image img{
+transform:scale(1.08);
 }
 
 .article-content{
 padding:25px;
 }
 
-.category{
+.badge{
 display:inline-block;
-background:#efeaff;
-color:#6a5cff;
-padding:7px 14px;
+padding:8px 14px;
 border-radius:30px;
-font-size:13px;
-font-weight:600;
+font-size:.8rem;
+font-weight:700;
 margin-bottom:15px;
 }
 
-.article-content h2{
-font-size:24px;
-line-height:1.5;
+.case-study{
+background:#fff0d8;
+color:#c67a00;
+}
+
+.ai-tools{
+background:#efe8ff;
+color:#6c5cff;
+}
+
+.image-tools{
+background:#e7f6ff;
+color:#0084ff;
+}
+
+.meta{
+display:flex;
+gap:15px;
+font-size:.85rem;
+color:#777;
+margin-bottom:15px;
+}
+
+.article-content h3{
+font-size:1.45rem;
+line-height:1.4;
 margin-bottom:15px;
 }
 
 .article-content p{
 color:#666;
-line-height:1.8;
 margin-bottom:20px;
 }
 
 .read-btn{
 display:inline-block;
 padding:12px 22px;
-background:#6a5cff;
-color:#fff;
-text-decoration:none;
-border-radius:10px;
+background:linear-gradient(135deg,#5d4fff,#8a5cff);
+color:white;
+border-radius:12px;
 font-weight:600;
 }
 
-@media(max-width:900px){
-
-.blog-grid{
-grid-template-columns:1fr;
+.read-btn:hover{
+opacity:.9;
 }
 
-.blog-header h1{
-font-size:42px;
+/* CTA */
+
+.cta{
+background:linear-gradient(135deg,#5d4fff,#8a5cff);
+padding:70px 30px;
+border-radius:30px;
+text-align:center;
+color:white;
+margin-bottom:80px;
 }
 
-.nav-links{
-display:none;
+.cta h2{
+font-size:2.5rem;
+margin-bottom:15px;
+}
+
+.cta p{
+max-width:700px;
+margin:auto;
+margin-bottom:25px;
+}
+
+.cta-btn{
+display:inline-block;
+background:white;
+color:#6c5cff;
+padding:15px 28px;
+font-weight:700;
+border-radius:14px;
+}
+
+/* FOOTER */
+
+.footer{
+background:#0f1117;
+padding:60px 0;
+color:white;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.footer h3{
+margin-bottom:15px;
+}
+
+.footer a{
+display:block;
+color:#d4d4d4;
+margin-bottom:10px;
+}
+
+.footer a:hover{
+color:white;
+}
+
+.footer p{
+color:#cfcfcf;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:70px 20px;
+}
+
+.hero h1{
+font-size:2.4rem;
+}
+
+.section-header h2{
+font-size:2rem;
+}
+
+.cta h2{
+font-size:2rem;
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
 
-<header>
+<nav class="navbar">
 
-<div class="container navbar">
+<div class="container nav-content">
 
 <div class="logo">
 Smart AI Tools Guides
@@ -207,109 +399,48 @@ Smart AI Tools Guides
 
 </div>
 
-</header>
+</nav>
 
-<section class="blog-header">
+<section class="hero">
 
 <div class="container">
 
-<h1>Latest Articles</h1>
+<h1>
+AI Tools Guides & Expert Resources
+</h1>
 
 <p>
-Discover powerful AI tools, image utilities, productivity resources, and in-depth guides designed to help creators, developers, students, and businesses work smarter.
+Explore detailed AI tool reviews, image utilities, practical tutorials, case studies, and professional guides designed to help creators, bloggers, marketers, and businesses grow faster.
 </p>
 
 </div>
 
 </section>
 
-<section class="blog-section">
+<section class="stats">
 
 <div class="container">
 
-<div class="blog-grid">
-  <!-- ARTICLE 1 -->
+<div class="stats-grid">
 
-<div class="article-card">
-
-<div class="article-image">
-
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200" alt="Image Resizer Tool">
-
+<div class="stat-card">
+<h3>3+</h3>
+<p>Published Articles</p>
 </div>
 
-<div class="article-content">
-
-<span class="category">Image Tools</span>
-
-<h2>Image Resizer Tool</h2>
-
-<p>
-Resize images online quickly while maintaining image quality. Perfect for websites, blogs, social media, and digital projects.
-</p>
-
-<a href="article1.html" class="read-btn">
-Read Article
-</a>
-
+<div class="stat-card">
+<h3>20+</h3>
+<p>AI Tool Ideas</p>
 </div>
 
+<div class="stat-card">
+<h3>100%</h3>
+<p>Free Resources</p>
 </div>
 
-<!-- ARTICLE 2 -->
-
-<div class="article-card">
-
-<div class="article-image">
-
-<img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200" alt="AI Image Upscaler">
-
-</div>
-
-<div class="article-content">
-
-<span class="category">AI Tools</span>
-
-<h2>AI Image Upscaler</h2>
-
-<p>
-Enhance image resolution using AI technology and improve visual quality without complicated editing software.
-</p>
-
-<a href="article2.html" class="read-btn">
-Read Article
-</a>
-
-</div>
-
-</div>
-
-<!-- ARTICLE 3 -->
-
-<div class="article-card">
-
-<div class="article-image">
-
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200" alt="Image Watermark Tool">
-
-</div>
-
-<div class="article-content">
-
-<span class="category">Branding Tools</span>
-
-<h2>Image Watermark Tool</h2>
-
-<p>
-Protect your images and strengthen your brand identity by adding professional custom watermarks.
-</p>
-
-<a href="article3.html" class="read-btn">
-Read Article
-</a>
-
-</div>
-
+<div class="stat-card">
+<h3>2026</h3>
+<p>Latest Updates</p>
 </div>
 
 </div>
@@ -317,131 +448,122 @@ Read Article
 </div>
 
 </section>
-  <section style="padding:20px 0 80px;">
 
-<div class="container">
+<section class="container">
 
-<div style="
-background:linear-gradient(135deg,#6a5cff,#9f55ff);
-padding:60px;
-border-radius:25px;
-text-align:center;
-color:white;
-">
+<div class="section-header">
 
-<h2 style="
-font-size:42px;
-margin-bottom:20px;
-">
-
-Stay Updated
-
+<h2>
+Latest Articles
 </h2>
 
-<p style="
-max-width:700px;
-margin:auto;
-line-height:1.8;
-margin-bottom:30px;
-font-size:18px;
-">
-
-Get the latest AI tools, image utilities, tutorials, and technology resources delivered directly to your dashboard.
-
+<p>
+Discover practical AI guides, tool comparisons, startup case studies, and image utility tutorials.
 </p>
 
-<a href="index.html"
-style="
-display:inline-block;
-padding:15px 30px;
-background:white;
-color:#6a5cff;
-text-decoration:none;
-font-weight:700;
-border-radius:12px;
-">
-
-Explore AI Tools
-
-</a>
-
 </div>
 
+<div class="filters">
+
+<button class="filter-btn">All</button>
+<button class="filter-btn">Case Study</button>
+<button class="filter-btn">AI Tools</button>
+<button class="filter-btn">Image Tools</button>
+
 </div>
-
-</section>
-
-<footer style="
-background:#111;
-color:white;
-padding:60px 20px;
-">
+<footer class="footer">
 
 <div class="container">
 
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:40px;
-">
+<div class="footer-grid">
+
+<!-- COLUMN 1 -->
 
 <div>
 
-<h3 style="margin-bottom:20px;">
+<h3>
 Smart AI Tools Guides
 </h3>
 
-<p style="line-height:1.9;color:#ccc;">
-Discover powerful AI tools, image utilities, productivity resources, and practical guides designed to help creators and businesses succeed online.
+<p>
+
+Discover powerful AI tools, image utilities, productivity resources, and practical guides designed to help creators, marketers, bloggers, developers, and businesses work smarter.
+
 </p>
 
 </div>
 
+<!-- COLUMN 2 -->
+
 <div>
 
-<h3 style="margin-bottom:20px;">
+<h3>
 Quick Links
 </h3>
 
-<p><a href="index.html" style="color:#ccc;text-decoration:none;">Home</a></p>
+<a href="index.html">Home</a>
 
-<p><a href="blog.html" style="color:#ccc;text-decoration:none;">Blog</a></p>
+<a href="blog.html">Blog</a>
 
-<p><a href="about.html" style="color:#ccc;text-decoration:none;">About</a></p>
+<a href="about.html">About</a>
 
-<p><a href="contact.html" style="color:#ccc;text-decoration:none;">Contact</a></p>
+<a href="contact.html">Contact</a>
 
 </div>
 
+<!-- COLUMN 3 -->
+
 <div>
 
-<h3 style="margin-bottom:20px;">
+<h3>
 Legal
 </h3>
 
-<p><a href="privacy.html" style="color:#ccc;text-decoration:none;">Privacy Policy</a></p>
+<a href="privacy.html">Privacy Policy</a>
 
-<p style="color:#ccc;">
-Terms & Conditions
-</p>
+<a href="privacy.html">Terms & Conditions</a>
+
+</div>
+
+<!-- COLUMN 4 -->
+
+<div>
+
+<h3>
+Resources
+</h3>
+
+<a href="article1.html">
+AI Startup Case Study
+</a>
+
+<a href="article2.html">
+Top AI Image Generators
+</a>
+
+<a href="article3.html">
+Image Watermark Guide
+</a>
 
 </div>
 
 </div>
 
 <hr style="
-margin:40px 0;
+margin:40px 0 25px;
 border:none;
 height:1px;
-background:#333;
+background:rgba(255,255,255,.1);
 ">
 
 <div style="
 text-align:center;
-color:#999;
+color:#bdbdbd;
+font-size:.95rem;
 ">
 
-© 2026 Smart AI Tools Guides. All Rights Reserved.
+© 2026 Smart AI Tools Guides.
+All Rights Reserved.
 
 </div>
 
@@ -449,6 +571,7 @@ color:#999;
 
 </footer>
 
+</section>
+
 </body>
 </html>
-  
