@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AI Tools Blog | Smart AI Tools Guides</title>
+<title>AI Blog | Smart AI Tools Guides</title>
 
-<meta name="description" content="Explore expert AI tool guides, startup case studies, image utilities, tutorials, and practical resources for creators, marketers, bloggers, and businesses.">
+<meta name="description"
+content="Explore AI tools, image utilities, tutorials, case studies, and practical resources from Smart AI Tools Guides.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,16 +24,11 @@ padding:0;
 box-sizing:border-box;
 }
 
-html{
-scroll-behavior:smooth;
-}
-
 body{
 font-family:'Poppins',sans-serif;
-background:#f5f6fa;
-color:#333;
+background:#f5f7fb;
+color:#222;
 overflow-x:hidden;
-line-height:1.8;
 }
 
 a{
@@ -45,7 +42,7 @@ display:block;
 
 .container{
 width:100%;
-max-width:1200px;
+max-width:1250px;
 margin:auto;
 padding:0 20px;
 }
@@ -54,18 +51,17 @@ padding:0 20px;
 
 .navbar{
 background:#fff;
+box-shadow:0 2px 20px rgba(0,0,0,.06);
 position:sticky;
 top:0;
 z-index:999;
-box-shadow:0 2px 15px rgba(0,0,0,.05);
 }
 
 .nav-content{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 0;
-gap:20px;
+padding:18px 0;
 }
 
 .logo{
@@ -95,16 +91,34 @@ color:#6c5cff;
 /* HERO */
 
 .hero{
-background:linear-gradient(135deg,#5d4fff,#8b5cff);
-padding:100px 20px;
+background:
+linear-gradient(
+135deg,
+#5d4fff,
+#7a54ff,
+#9a5cff
+);
+
+padding:100px 20px 170px;
 text-align:center;
 color:#fff;
 }
 
+.hero-badge{
+display:inline-block;
+padding:10px 18px;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(10px);
+border-radius:50px;
+margin-bottom:20px;
+font-size:.9rem;
+font-weight:600;
+}
+
 .hero h1{
-font-size:clamp(2.5rem,5vw,4.5rem);
+font-size:clamp(2.8rem,5vw,5rem);
 font-weight:800;
-line-height:1.2;
+line-height:1.15;
 max-width:900px;
 margin:auto;
 }
@@ -116,65 +130,72 @@ font-size:1.15rem;
 opacity:.95;
 }
 
-/* FEATURED */
+/* FEATURED ARTICLE */
 
-.featured{
-margin-top:-70px;
+.featured-wrapper{
+margin-top:-90px;
 position:relative;
 z-index:10;
 }
 
 .featured-card{
 background:#fff;
-border-radius:30px;
+border-radius:35px;
 overflow:hidden;
-box-shadow:0 20px 60px rgba(0,0,0,.08);
+box-shadow:0 25px 60px rgba(0,0,0,.10);
 display:grid;
-grid-template-columns:1fr 1fr;
-align-items:center;
+grid-template-columns:1.1fr 1fr;
 }
 
 .featured-image img{
+width:100%;
 height:100%;
 object-fit:cover;
 }
 
 .featured-content{
 padding:50px;
+display:flex;
+flex-direction:column;
+justify-content:center;
 }
 
-.featured-badge{
+.featured-tag{
 display:inline-block;
+width:max-content;
 padding:8px 16px;
-background:#efeaff;
+border-radius:30px;
+background:#f1ebff;
 color:#6c5cff;
 font-size:.85rem;
 font-weight:700;
-border-radius:30px;
-margin-bottom:20px;
+margin-bottom:18px;
 }
 
 .featured-content h2{
-font-size:2.2rem;
+font-size:2.3rem;
 line-height:1.3;
 margin-bottom:15px;
 }
 
 .featured-content p{
 color:#666;
+line-height:1.8;
 margin-bottom:25px;
 }
 
 .featured-meta{
 display:flex;
 gap:15px;
-font-size:.9rem;
+flex-wrap:wrap;
 color:#888;
+font-size:.9rem;
 margin-bottom:25px;
 }
 
 .featured-btn{
 display:inline-block;
+width:max-content;
 padding:14px 24px;
 border-radius:14px;
 background:linear-gradient(135deg,#5d4fff,#8b5cff);
@@ -182,7 +203,7 @@ color:#fff;
 font-weight:600;
 }
 
-/* SECTION HEADER */
+/* SECTION */
 
 .section-header{
 text-align:center;
@@ -192,7 +213,7 @@ margin:90px 0 50px;
 .section-header h2{
 font-size:3rem;
 font-weight:800;
-margin-bottom:15px;
+margin-bottom:12px;
 }
 
 .section-header p{
@@ -205,22 +226,22 @@ color:#666;
 
 .articles-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+gap:35px;
 margin-bottom:80px;
 }
 
 .article-card{
 background:#fff;
-border-radius:25px;
+border-radius:28px;
 overflow:hidden;
-box-shadow:0 10px 35px rgba(0,0,0,.06);
+box-shadow:0 15px 45px rgba(0,0,0,.07);
 transition:.35s;
 }
 
 .article-card:hover{
 transform:translateY(-10px);
-box-shadow:0 20px 50px rgba(0,0,0,.12);
+box-shadow:0 25px 55px rgba(0,0,0,.12);
 }
 
 .article-image{
@@ -240,42 +261,7 @@ transform:scale(1.08);
 }
 
 .article-content{
-padding:25px;
-}
-
-.badge{
-display:inline-block;
-padding:7px 14px;
-border-radius:30px;
-font-size:.8rem;
-font-weight:700;
-margin-bottom:15px;
-}
-
-.case-study{
-background:#fff3db;
-color:#c77a00;
-}
-
-.ai-tools{
-background:#ebe7ff;
-color:#6c5cff;
-}
-
-.image-tools{
-background:#e7fff2;
-color:#00a86b;
-}
-
-.article-content h3{
-font-size:1.45rem;
-line-height:1.4;
-margin-bottom:12px;
-}
-
-.article-content p{
-color:#666;
-margin-bottom:18px;
+padding:28px;
 }
 
 .meta{
@@ -283,6 +269,42 @@ display:flex;
 justify-content:space-between;
 font-size:.85rem;
 color:#888;
+margin-bottom:15px;
+}
+
+.badge{
+display:inline-block;
+padding:8px 14px;
+border-radius:50px;
+font-size:.8rem;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.case-study{
+background:#fff3d6;
+color:#c47a00;
+}
+
+.ai-tools{
+background:#efeaff;
+color:#6c5cff;
+}
+
+.image-tools{
+background:#e6fff4;
+color:#00a86b;
+}
+
+.article-content h3{
+font-size:1.4rem;
+line-height:1.45;
+margin-bottom:15px;
+}
+
+.article-content p{
+color:#666;
+line-height:1.8;
 margin-bottom:20px;
 }
 
@@ -308,7 +330,7 @@ padding:30px;
 }
 
 .hero{
-padding:80px 20px;
+padding:80px 20px 140px;
 }
 
 .hero h1{
@@ -336,11 +358,13 @@ Smart AI Tools Guides
 </div>
 
 <div class="nav-links">
+
 <a href="index.html">Home</a>
 <a href="blog.html">Blog</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
 <a href="privacy.html">Privacy Policy</a>
+
 </div>
 
 </div>
@@ -351,31 +375,41 @@ Smart AI Tools Guides
 
 <div class="container">
 
-<h1>AI Tools Guides, Tutorials & Startup Stories</h1>
+<div class="hero-badge">
+🚀 AI Resources & Tutorials
+</div>
+
+<h1>
+AI Tools, Tutorials & Startup Stories
+</h1>
 
 <p>
-Discover expert AI guides, image tool tutorials, startup case studies,
-and practical resources designed to help creators, marketers, bloggers,
-and businesses grow faster.
+Explore expert AI guides, image tool tutorials,
+startup case studies, comparisons, and practical resources
+for creators, bloggers, marketers, and businesses.
 </p>
 
 </div>
 
 </section>
 
-<section class="featured">
+<section class="featured-wrapper">
 
 <div class="container">
 
 <div class="featured-card">
 
 <div class="featured-image">
-<img src="images/article1-cover.webp" alt="Featured Article">
+
+<img
+src="https://ai-image-generator-umber-one.vercel.app/images/file_000000008d9c720a810e2168871e2f82.png"
+alt="Featured Article">
+
 </div>
 
 <div class="featured-content">
 
-<span class="featured-badge">
+<span class="featured-tag">
 Featured Case Study
 </span>
 
@@ -384,14 +418,15 @@ How I Built an AI Image Generator and Turned It Into a Profitable Project
 </h2>
 
 <p>
-A complete behind-the-scenes case study showing how an AI image generator
-evolved from an idea into a real digital product.
+A complete behind-the-scenes journey showing how an AI image generator evolved into a profitable digital product through development, SEO, and monetization.
 </p>
 
 <div class="featured-meta">
+
 <span>June 2026</span>
 <span>•</span>
 <span>15 Min Read</span>
+
 </div>
 
 <a href="article1.html" class="featured-btn">
@@ -413,55 +448,23 @@ Read Full Story
 <h2>Latest Articles</h2>
 
 <p>
-Explore the latest tutorials, image tools, startup stories,
-comparisons, and AI resources.
+Discover practical AI guides, image tools, startup stories,
+and expert resources designed for modern creators.
 </p>
 
 </div>
 
 <div class="articles-grid">
-  <!-- ARTICLE 1 -->
+  <!-- ARTICLE 2 -->
 
 <div class="article-card">
 
 <div class="article-image">
-<img src="images/article1-cover.webp" alt="How I Built an AI Image Generator">
-</div>
 
-<div class="article-content">
+<img
+src="https://ai-image-generator-umber-one.vercel.app/images/file_000000003ef4720a8b7c1d47ae137f06.png"
+alt="Top 5 AI Image Generators">
 
-<span class="badge case-study">
-Case Study
-</span>
-
-<div class="meta">
-<span>June 2026</span>
-<span>15 Min Read</span>
-</div>
-
-<h3>
-How I Built an AI Image Generator and Turned It Into a Profitable Project
-</h3>
-
-<p>
-A complete startup journey covering planning, development,
-AI integration, monetization, SEO growth, and lessons learned.
-</p>
-
-<a href="article1.html" class="read-btn">
-Read Article
-</a>
-
-</div>
-
-</div>
-
-<!-- ARTICLE 2 -->
-
-<div class="article-card">
-
-<div class="article-image">
-<img src="images/article2-cover.webp" alt="Top AI Image Generators">
 </div>
 
 <div class="article-content">
@@ -471,21 +474,31 @@ AI Tools
 </span>
 
 <div class="meta">
+
 <span>June 2026</span>
+
 <span>12 Min Read</span>
+
 </div>
 
 <h3>
+
 Top 5 AI Image Generators in 2026: Complete Comparison Guide
+
 </h3>
 
 <p>
-Compare Midjourney, DALL·E, Firefly, Leonardo AI,
-and Ideogram to discover which platform best fits your needs.
+
+Compare Midjourney, DALL·E, Adobe Firefly, Leonardo AI,
+and Ideogram to discover which AI image generator offers
+the best features, image quality, pricing, and usability.
+
 </p>
 
 <a href="article2.html" class="read-btn">
-Read Article
+
+Read Article →
+
 </a>
 
 </div>
@@ -497,7 +510,11 @@ Read Article
 <div class="article-card">
 
 <div class="article-image">
-<img src="images/article3-cover.webp" alt="Image Watermark Tool Guide">
+
+<img
+src="https://ai-image-generator-umber-one.vercel.app/images/file_0000000090887243a983677958012116.png"
+alt="AI Image Watermark Tool">
+
 </div>
 
 <div class="article-content">
@@ -507,22 +524,31 @@ Image Tools
 </span>
 
 <div class="meta">
+
 <span>June 2026</span>
+
 <span>10 Min Read</span>
+
 </div>
 
 <h3>
+
 AI Image Watermark Tool: The Complete Guide to Protecting Images and Building Your Brand
+
 </h3>
 
 <p>
+
 Learn how watermarking protects digital assets,
-improves branding, prevents content theft,
-and increases online visibility.
+prevents image theft, improves branding,
+and helps creators maintain ownership online.
+
 </p>
 
 <a href="article3.html" class="read-btn">
-Read Article
+
+Read Article →
+
 </a>
 
 </div>
@@ -531,50 +557,100 @@ Read Article
 
 </div>
 
-</section>
+<!-- CTA -->
 
-<!-- CTA SECTION -->
+<section style="margin:30px 0 90px;">
 
-<section class="container">
+<div style="
+background:linear-gradient(135deg,#5d4fff,#8b5cff);
+border-radius:35px;
+padding:70px 40px;
+text-align:center;
+color:white;
+">
 
-<div class="cta">
+<h2 style="
+font-size:2.5rem;
+margin-bottom:20px;
+">
 
-<h2>
-Explore More AI Resources
+Explore Powerful AI Tools
+
 </h2>
 
-<p>
-Discover powerful AI tools, image utilities,
-tutorials, startup stories, and practical guides
-designed to help creators and businesses grow faster.
+<p style="
+max-width:750px;
+margin:auto;
+font-size:1.1rem;
+opacity:.95;
+">
+
+Discover free AI tools, image utilities,
+productivity resources, tutorials,
+and expert guides designed to help you create,
+optimize, and grow faster.
+
 </p>
 
-<a href="index.html" class="cta-btn">
+<a href="index.html"
+style="
+display:inline-block;
+margin-top:30px;
+padding:15px 28px;
+background:white;
+color:#6c5cff;
+border-radius:14px;
+font-weight:700;
+">
+
 Explore AI Tools
+
 </a>
 
 </div>
 
 </section>
+  </section>
+
 <!-- FOOTER -->
 
-<footer class="footer">
+<footer style="
+background:#0d1020;
+padding:80px 0 40px;
+color:white;
+">
 
 <div class="container">
 
-<div class="footer-grid">
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:40px;
+">
 
 <!-- COLUMN 1 -->
 
 <div>
 
-<h3>Smart AI Tools Guides</h3>
+<h3 style="
+margin-bottom:20px;
+font-size:1.3rem;
+">
 
-<p>
-Discover powerful AI tools, image utilities,
-productivity resources, tutorials, and practical
-guides designed to help creators, bloggers,
-developers, marketers, and businesses grow faster.
+Smart AI Tools Guides
+
+</h3>
+
+<p style="
+color:#bfc4d6;
+line-height:1.9;
+">
+
+Explore powerful AI tools, image utilities,
+tutorials, startup stories, and practical resources
+designed to help creators, marketers,
+bloggers, and businesses grow faster.
+
 </p>
 
 </div>
@@ -583,12 +659,39 @@ developers, marketers, and businesses grow faster.
 
 <div>
 
-<h3>Quick Links</h3>
+<h3 style="
+margin-bottom:20px;
+font-size:1.3rem;
+">
 
-<a href="index.html">Home</a>
-<a href="blog.html">Blog</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
+Quick Links
+
+</h3>
+
+<a href="index.html"
+style="display:block;color:#bfc4d6;margin-bottom:12px;">
+Home
+</a>
+
+<a href="blog.html"
+style="display:block;color:#bfc4d6;margin-bottom:12px;">
+Blog
+</a>
+
+<a href="about.html"
+style="display:block;color:#bfc4d6;margin-bottom:12px;">
+About Us
+</a>
+
+<a href="contact.html"
+style="display:block;color:#bfc4d6;margin-bottom:12px;">
+Contact Us
+</a>
+
+<a href="privacy.html"
+style="display:block;color:#bfc4d6;">
+Privacy Policy
+</a>
 
 </div>
 
@@ -596,10 +699,35 @@ developers, marketers, and businesses grow faster.
 
 <div>
 
-<h3>Legal</h3>
+<h3 style="
+margin-bottom:20px;
+font-size:1.3rem;
+">
 
-<a href="privacy.html">Privacy Policy</a>
-<a href="privacy.html">Terms & Conditions</a>
+Featured Articles
+
+</h3>
+
+<a href="article1.html"
+style="display:block;color:#bfc4d6;margin-bottom:12px;">
+
+How I Built an AI Image Generator
+
+</a>
+
+<a href="article2.html"
+style="display:block;color:#bfc4d6;margin-bottom:12px;">
+
+Top 5 AI Image Generators in 2026
+
+</a>
+
+<a href="article3.html"
+style="display:block;color:#bfc4d6;">
+
+AI Image Watermark Tool Guide
+
+</a>
 
 </div>
 
@@ -607,27 +735,52 @@ developers, marketers, and businesses grow faster.
 
 <div>
 
-<h3>Featured Articles</h3>
+<h3 style="
+margin-bottom:20px;
+font-size:1.3rem;
+">
 
-<a href="article1.html">
-How I Built an AI Image Generator
+Resources
+
+</h3>
+
+<a href="index.html"
+style="display:block;color:#bfc4d6;margin-bottom:12px;">
+
+AI Tools Collection
+
 </a>
 
-<a href="article2.html">
-Top 5 AI Image Generators in 2026
+<a href="blog.html"
+style="display:block;color:#bfc4d6;margin-bottom:12px;">
+
+Latest Tutorials
+
 </a>
 
-<a href="article3.html">
-AI Image Watermark Tool Guide
+<a href="contact.html"
+style="display:block;color:#bfc4d6;">
+
+Get In Touch
+
 </a>
 
 </div>
 
 </div>
 
-<hr class="footer-line">
+<hr style="
+margin:45px 0 25px;
+border:none;
+height:1px;
+background:rgba(255,255,255,.10);
+">
 
-<div class="copyright">
+<div style="
+text-align:center;
+color:#bfc4d6;
+font-size:.95rem;
+">
 
 © 2026 Smart AI Tools Guides.
 All Rights Reserved.
@@ -637,60 +790,6 @@ All Rights Reserved.
 </div>
 
 </footer>
-
-<style>
-
-/* FOOTER */
-
-.footer{
-background:#0d1020;
-padding:70px 0 40px;
-color:#fff;
-}
-
-.footer-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:40px;
-}
-
-.footer h3{
-margin-bottom:18px;
-font-size:1.2rem;
-font-weight:700;
-}
-
-.footer p{
-color:#bfc4d6;
-line-height:1.9;
-}
-
-.footer a{
-display:block;
-margin-bottom:12px;
-color:#bfc4d6;
-transition:.3s;
-}
-
-.footer a:hover{
-color:#ffffff;
-padding-left:6px;
-}
-
-.footer-line{
-margin:40px 0 25px;
-border:none;
-height:1px;
-background:rgba(255,255,255,.12);
-}
-
-.copyright{
-text-align:center;
-color:#bfc4d6;
-font-size:.95rem;
-}
-
-</style>
 
 </body>
 </html>
