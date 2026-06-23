@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+AI Image Resizer: Resize Images Without Losing Quality
+</title>
+
+<meta name="description"
+content="Learn how AI image resizers work, compare the best tools, and discover how to resize images without losing quality.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#fafafa;
+color:#2d3748;
+line-height:1.9;
+overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+position:relative;
+min-height:85vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:120px 25px;
+background:
+linear-gradient(
+135deg,
+#4f46e5,
+#7c3aed,
+#06b6d4
+);
+color:white;
+overflow:hidden;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+width:700px;
+height:700px;
+border-radius:50%;
+background:rgba(255,255,255,.08);
+top:-250px;
+right:-180px;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:1000px;
+}
+
+.hero-badge{
+display:inline-block;
+padding:10px 22px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(10px);
+border-radius:50px;
+font-size:.9rem;
+font-weight:600;
+margin-bottom:25px;
+}
+
+.hero h1{
+font-size:clamp(3rem,6vw,5rem);
+font-weight:800;
+line-height:1.1;
+margin-bottom:25px;
+}
+
+.hero p{
+max-width:800px;
+margin:auto;
+font-size:1.15rem;
+opacity:.95;
+}
+
+/* FLOATING INFO BAR */
+
+.reading-bar{
+max-width:1200px;
+margin:-45px auto 0;
+padding:0 20px;
+position:relative;
+z-index:5;
+}
+
+.reading-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.reading-card{
+background:white;
+padding:25px;
+border-radius:24px;
+text-align:center;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.reading-card span{
+font-size:2rem;
+display:block;
+margin-bottom:10px;
+}
+
+/* ARTICLE */
+
+.article-container{
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+}
+
+.featured-image{
+width:100%;
+display:block;
+border-radius:30px;
+margin-bottom:40px;
+}
+
+.intro-box{
+background:white;
+padding:40px;
+border-radius:30px;
+box-shadow:0 12px 35px rgba(0,0,0,.06);
+margin-bottom:40px;
+}
+
+.toc-box{
+background:
+linear-gradient(
+135deg,
+#4f46e5,
+#7c3aed
+);
+padding:35px;
+border-radius:28px;
+margin-bottom:50px;
+}
+
+.toc-box h3{
+color:white;
+margin-bottom:20px;
+}
+
+.toc-box a{
+display:block;
+color:#e9e9ff;
+text-decoration:none;
+margin-bottom:10px;
+}
+
+.section-title{
+font-size:2.3rem;
+font-weight:800;
+margin:80px 0 25px;
+color:#1e293b;
+line-height:1.3;
+}
+
+.insight-box{
+background:#eef7ff;
+border-left:6px solid #06b6d4;
+padding:28px;
+border-radius:20px;
+margin:35px 0;
+}
+
+/* FEATURE CARDS */
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin:40px 0;
+}
+
+.feature-card{
+background:white;
+padding:30px;
+border-radius:24px;
+box-shadow:0 12px 30px rgba(0,0,0,.05);
+text-align:center;
+}
+
+.feature-card .icon{
+font-size:2.5rem;
+margin-bottom:15px;
+}
+
+/* STATS */
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin:40px 0;
+}
+
+.stat-card{
+background:white;
+padding:30px;
+border-radius:24px;
+text-align:center;
+box-shadow:0 12px 30px rgba(0,0,0,.05);
+}
+
+.stat-card h3{
+font-size:2rem;
+color:#4f46e5;
+margin-bottom:10px;
+}
+
+/* PROS CONS */
+
+.pros-cons{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+margin:40px 0;
+}
+
+.pros-box{
+background:#ecfff4;
+padding:30px;
+border-radius:24px;
+}
+
+.cons-box{
+background:#fff2f2;
+padding:30px;
+border-radius:24px;
+}
+
+.author-mini{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:15px;
+margin-top:35px;
+}
+
+.author-mini img{
+width:65px;
+height:65px;
+border-radius:50%;
+object-fit:cover;
+}
+
+@media(max-width:768px){
+
+.reading-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.pros-cons{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:2.6rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-badge">
+
+🛠️ AI Image Optimization Guide
+
+</div>
+
+<h1>
+
+AI Image Resizer:
+Resize Images Without Losing Quality
+
+</h1>
+
+<p>
+
+Discover how modern AI image resizers intelligently resize photos while preserving sharpness, detail, and visual quality across websites, social media, marketing campaigns, and professional projects.
+
+</p>
+
+<div class="author-mini">
+
+<img
+src="images/file_00000000c940720a9a38bd79b452b5fc.png"
+alt="Author">
+
+<div>
+
+<strong>Smart AI Tools Guides</strong><br>
+
+Updated June 2026
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="reading-bar">
+
+<div class="reading-grid">
+
+<div class="reading-card">
+
+<span>⏱️</span>
+
+12 Min Read
+
+</div>
+
+<div class="reading-card">
+
+<span>🧩</span>
+
+AI Technology
+
+</div>
+
+<div class="reading-card">
+
+<span>📈</span>
+
+Professional Guide
+
+</div>
+
+<div class="reading-card">
+
+<span>💎</span>
+
+Expert Insights
+
+</div>
+
+</div>
+
+</section>
+
+<div class="article-container">
+
+<!-- IMAGE 1 -->
+
+<img
+src="PUT_IMAGE_1_HERE"
+class="featured-image"
+alt="AI Image Resizer">
+
+<div class="intro-box">
+
+<p>
+
+Image resizing seems simple, but choosing the wrong method can quickly reduce image quality, create pixelation, or distort important visual details.
+
+</p>
+
+<p>
+
+AI image resizing changes this process completely by using intelligent algorithms that understand image structure rather than simply stretching pixels.
+
+</p>
+
+</div>
+
+<div class="toc-box">
+
+<h3>
+
+🚀 What You'll Learn
+
+</h3>
+
+<a href="#">🎯 What Is AI Image Resizing?</a>
+
+<a href="#">🔬 How AI Resizing Works</a>
+
+<a href="#">🛠️ Best AI Resizers</a>
+
+<a href="#">📊 Comparison Guide</a>
+
+<a href="#">💼 Business Applications</a>
+
+<a href="#">⚠️ Common Mistakes</a>
+
+<a href="#">🔮 Future Trends</a>
+
+</div>
+
+<h2 class="section-title">
+
+🎯 What Is AI Image Resizing?
+
+</h2>
+
+<p>
+
+AI image resizing uses machine learning models to intelligently enlarge or reduce image dimensions while preserving details, textures, and overall image quality.
+
+</p>
+
+<div class="insight-box">
+
+<strong>
+
+💡 Expert Insight
+
+</strong>
+
+<p>
+
+Unlike traditional resizing methods, AI systems analyze image content and reconstruct details during the resizing process.
+
+</p>
+
+</div>
+
+<!-- PART 1 STARTS HERE -->
+<!-- IMAGE 2 -->
+
+<img
+src="PUT_IMAGE_2_HERE"
+class="featured-image"
+alt="How AI Image Resizing Works">
+
+<h2 class="section-title">
+
+🔬 How AI Image Resizing Works
+
+</h2>
+
+<p>
+
+Traditional image resizing simply adds or removes pixels, often resulting in blurry edges, distorted details, and reduced image quality.
+
+</p>
+
+<p>
+
+AI image resizers take a completely different approach. Instead of stretching pixels, they analyze image content and predict how details should appear at different dimensions.
+
+</p>
+
+<p>
+
+Advanced machine learning models are trained on millions of images, allowing them to recognize textures, objects, edges, patterns, and visual structures.
+
+</p>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+
+<div class="icon">
+
+🧠
+
+</div>
+
+<h3>
+
+Smart Analysis
+
+</h3>
+
+<p>
+
+AI understands image structure before resizing.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="icon">
+
+🎨
+
+</div>
+
+<h3>
+
+Detail Preservation
+
+</h3>
+
+<p>
+
+Important textures and edges remain sharp.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="icon">
+
+⚡
+
+</div>
+
+<h3>
+
+Fast Processing
+
+</h3>
+
+<p>
+
+Results are generated within seconds.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="insight-box">
+
+<strong>
+
+🚀 Why It Matters
+
+</strong>
+
+<p>
+
+AI resizing can significantly improve image quality compared to traditional resizing methods, especially when enlarging photos.
+
+</p>
+
+</div>
+
+<h2 class="section-title">
+
+🛠️ Best AI Image Resizer Tools In 2026
+
+</h2>
+
+<p>
+
+Several AI-powered image resizing tools have emerged as industry leaders due to their quality, speed, and advanced enhancement capabilities.
+
+</p>
+
+<div class="stats-grid">
+
+<div class="stat-card">
+
+<h3>Topaz</h3>
+
+<p>
+
+Professional Enhancement
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>Canva</h3>
+
+<p>
+
+Beginner Friendly
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>Adobe</h3>
+
+<p>
+
+Creative Ecosystem
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>Upscale</h3>
+
+<p>
+
+Fast AI Results
+
+</p>
+
+</div>
+
+</div>
+
+<p>
+
+The ideal choice depends on whether your focus is professional photography, e-commerce, content creation, or social media publishing.
+
+</p>
+
+<!-- IMAGE 3 -->
+
+<img
+src="PUT_IMAGE_3_HERE"
+class="featured-image"
+alt="Best AI Image Resizer Tools">
+
+<h2 class="section-title">
+
+📊 AI Image Resizer Comparison
+
+</h2>
+
+<p>
+
+Not all AI image resizing tools deliver identical results. Some focus on speed while others prioritize image reconstruction and professional quality.
+
+</p>
+
+<table class="custom-table">
+
+<tr>
+
+<th>Tool</th>
+
+<th>Best For</th>
+
+<th>Quality</th>
+
+<th>Ease Of Use</th>
+
+</tr>
+
+<tr>
+
+<td>Topaz Gigapixel</td>
+
+<td>Professional Photos</td>
+
+<td>⭐⭐⭐⭐⭐</td>
+
+<td>⭐⭐⭐⭐</td>
+
+</tr>
+
+<tr>
+
+<td>Adobe Express</td>
+
+<td>Marketing Content</td>
+
+<td>⭐⭐⭐⭐⭐</td>
+
+<td>⭐⭐⭐⭐</td>
+
+</tr>
+
+<tr>
+
+<td>Canva AI</td>
+
+<td>Social Media</td>
+
+<td>⭐⭐⭐⭐</td>
+
+<td>⭐⭐⭐⭐⭐</td>
+
+</tr>
+
+<tr>
+
+<td>Upscale.media</td>
+
+<td>Quick Results</td>
+
+<td>⭐⭐⭐⭐</td>
+
+<td>⭐⭐⭐⭐⭐</td>
+
+</tr>
+
+</table>
+
+<div class="insight-box">
+
+<strong>
+
+💎 Professional Recommendation
+
+</strong>
+
+<p>
+
+For creators who regularly work with images, combining AI resizing and AI enhancement often delivers the best results.
+
+</p>
+
+</div>
+
+<!-- PART 2 STARTS HERE -->
+  <!-- IMAGE 4 -->
+
+<img
+src="PUT_IMAGE_4_HERE"
+class="featured-image"
+alt="AI Image Resizer Comparison">
+
+<h2 class="section-title">
+
+💼 Real-World Business Applications
+
+</h2>
+
+<p>
+
+AI image resizing has become an essential technology for businesses that manage large volumes of visual content.
+
+</p>
+
+<p>
+
+From e-commerce stores to media companies, organizations use AI-powered resizing tools to prepare images for multiple platforms while maintaining consistent quality.
+
+</p>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+
+<div class="icon">
+
+🛍️
+
+</div>
+
+<h3>
+
+E-Commerce
+
+</h3>
+
+<p>
+
+Optimize product images for marketplaces and online stores.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="icon">
+
+📱
+
+</div>
+
+<h3>
+
+Social Media
+
+</h3>
+
+<p>
+
+Resize content perfectly for every platform.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="icon">
+
+📰
+
+</div>
+
+<h3>
+
+Publishing
+
+</h3>
+
+<p>
+
+Prepare visuals for blogs, magazines, and websites.
+
+</p>
+
+</div>
+
+</div>
+
+<p>
+
+Businesses often require multiple image sizes for websites, mobile applications, advertisements, and social media channels.
+
+</p>
+
+<p>
+
+AI resizing dramatically reduces the time required to prepare these assets while maintaining professional visual standards.
+
+</p>
+
+<div class="insight-box">
+
+<strong>
+
+📈 Business Impact
+
+</strong>
+
+<p>
+
+Companies can save hours of manual editing work while maintaining consistent branding across every platform.
+
+</p>
+
+</div>
+
+<h2 class="section-title">
+
+⚠️ Common Image Resizing Mistakes
+
+</h2>
+
+<p>
+
+Even with advanced AI tools, poor practices can still reduce image quality and negatively affect user experience.
+
+</p>
+
+<div class="pros-cons">
+
+<div class="pros-box">
+
+<h3>
+
+✅ Best Practices
+
+</h3>
+
+<ul>
+
+<li>Start with high-resolution images.</li>
+
+<li>Use AI-powered resizing tools.</li>
+
+<li>Export in modern formats.</li>
+
+<li>Check image quality after resizing.</li>
+
+<li>Maintain consistent dimensions.</li>
+
+</ul>
+
+</div>
+
+<div class="cons-box">
+
+<h3>
+
+❌ Common Mistakes
+
+</h3>
+
+<ul>
+
+<li>Using low-quality originals.</li>
+
+<li>Over-compressing images.</li>
+
+<li>Ignoring aspect ratios.</li>
+
+<li>Using outdated resizing methods.</li>
+
+<li>Stretching images manually.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<!-- IMAGE 5 -->
+
+<img
+src="PUT_IMAGE_5_HERE"
+class="featured-image"
+alt="Common AI Image Resizing Mistakes">
+
+<h2 class="section-title">
+
+🔮 The Future Of AI Image Resizing
+
+</h2>
+
+<p>
+
+The next generation of AI image resizing tools will become increasingly intelligent and capable of understanding image context in greater detail.
+
+</p>
+
+<p>
+
+Future systems may automatically adapt image dimensions based on platform requirements, user behavior, device type, and visual content.
+
+</p>
+
+<div class="stats-grid">
+
+<div class="stat-card">
+
+<h3>AI</h3>
+
+<p>
+
+Context Awareness
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>4K+</h3>
+
+<p>
+
+Ultra-HD Outputs
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>Auto</h3>
+
+<p>
+
+Smart Optimization
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>Cloud</h3>
+
+<p>
+
+Instant Processing
+
+</p>
+
+</div>
+
+</div>
+
+<p>
+
+As AI models improve, resizing will become part of a larger image optimization workflow that includes enhancement, compression, restoration, and smart editing.
+
+</p>
+
+<div class="insight-box">
+
+<strong>
+
+🌟 Future Outlook
+
+</strong>
+
+<p>
+
+AI image resizing is evolving from a simple utility into a complete image quality optimization solution.
+
+</p>
+
+</div>
+
+<!-- PART 3A STARTS HERE -->
+  <!-- IMAGE 6 -->
+
+<img
+src="PUT_IMAGE_6_HERE"
+class="featured-image"
+alt="Future Of AI Image Resizing">
+
+<h2 class="section-title">
+
+🏆 Final Verdict
+
+</h2>
+
+<p>
+
+AI image resizing has become one of the most valuable technologies in modern digital content creation.
+
+</p>
+
+<p>
+
+Instead of relying on outdated resizing methods that often reduce image quality, AI-powered solutions intelligently analyze visual information and preserve important details during the resizing process.
+
+</p>
+
+<p>
+
+Whether you are a photographer, designer, blogger, marketer, business owner, or content creator, AI image resizers can significantly improve workflow efficiency while maintaining professional-quality visuals.
+
+</p>
+
+<p>
+
+As image optimization becomes increasingly important for websites, social media, e-commerce, and digital marketing, AI resizing tools will continue to play a critical role in helping users create better visual experiences.
+
+</p>
+
+<div class="insight-box">
+
+<strong>
+
+🚀 Key Takeaway
+
+</strong>
+
+<p>
+
+AI image resizing is no longer just about changing dimensions. It is about preserving quality, improving user experience, and maximizing the value of every image.
+
+</p>
+
+</div>
+
+<div class="intro-box">
+
+<h2 style="margin-bottom:20px;">
+
+🌟 Why Professionals Use AI Image Resizers
+
+</h2>
+
+<p>
+
+Professionals choose AI image resizing tools because they deliver better visual quality, faster workflows, and improved results compared to traditional image editing methods.
+
+</p>
+
+<p>
+
+By leveraging machine learning, these tools help preserve textures, edges, and fine details that would otherwise be lost during standard resizing processes.
+
+</p>
+
+</div>
+
+<div class="intro-box">
+
+<h2 style="margin-bottom:20px;">
+
+📌 Quick Summary
+
+</h2>
+
+<ul>
+
+<li>AI resizing preserves image quality.</li>
+
+<li>Ideal for websites, e-commerce, and social media.</li>
+
+<li>Reduces manual editing work.</li>
+
+<li>Improves content consistency.</li>
+
+<li>Supports modern digital workflows.</li>
+
+<li>Expected to become even smarter in the coming years.</li>
+
+</ul>
+
+</div>
+
+<!-- PART 3B STARTS HERE -->
+  <h2 class="section-title">
+
+❔ Frequently Asked Questions
+
+</h2>
+
+<div class="feature-card">
+
+<h3>
+
+Can AI Resize Images Without Losing Quality?
+
+</h3>
+
+<p>
+
+Yes. AI image resizers use machine learning algorithms to preserve important visual details while changing image dimensions.
+
+</p>
+
+</div>
+
+<br>
+
+<div class="feature-card">
+
+<h3>
+
+Is AI Resizing Better Than Traditional Resizing?
+
+</h3>
+
+<p>
+
+In most cases, yes. AI tools can reconstruct missing details and maintain image sharpness more effectively than standard resizing methods.
+
+</p>
+
+</div>
+
+<br>
+
+<div class="feature-card">
+
+<h3>
+
+What Is The Best AI Image Resizer?
+
+</h3>
+
+<p>
+
+Popular options include Topaz Gigapixel, Adobe Express, Canva AI, and Upscale.media, depending on your needs.
+
+</p>
+
+</div>
+
+<br>
+
+<div class="feature-card">
+
+<h3>
+
+Can AI Upscale Images?
+
+</h3>
+
+<p>
+
+Yes. Many AI image resizers can enlarge images while preserving quality and improving visual clarity.
+
+</p>
+
+</div>
+
+<br>
+
+<div class="feature-card">
+
+<h3>
+
+Who Should Use AI Image Resizers?
+
+</h3>
+
+<p>
+
+Photographers, bloggers, designers, marketers, businesses, and content creators can all benefit from AI-powered resizing tools.
+
+</p>
+
+</div>
+
+<h2 class="section-title">
+
+📰 Explore More AI Guides
+
+</h2>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+
+<img
+src="ARTICLE6_IMAGE"
+style="
+width:100%;
+border-radius:18px;
+margin-bottom:15px;
+">
+
+<h3>
+
+AI Background Remover Guide
+
+</h3>
+
+<a href="article6.html">
+
+Read Guide →
+
+</a>
+
+</div>
+
+<div class="feature-card">
+
+<img
+src="ARTICLE5_IMAGE"
+style="
+width:100%;
+border-radius:18px;
+margin-bottom:15px;
+">
+
+<h3>
+
+AI Image Compression Guide
+
+</h3>
+
+<a href="article5.html">
+
+Read Guide →
+
+</a>
+
+</div>
+
+<div class="feature-card">
+
+<img
+src="ARTICLE4_IMAGE"
+style="
+width:100%;
+border-radius:18px;
+margin-bottom:15px;
+">
+
+<h3>
+
+AI Image Upscaler Tools
+
+</h3>
+
+<a href="article4.html">
+
+Read Guide →
+
+</a>
+
+</div>
+
+</div>
+
+<div style="
+margin-top:70px;
+background:
+linear-gradient(
+135deg,
+#4f46e5,
+#7c3aed
+);
+padding:45px;
+border-radius:30px;
+color:white;
+text-align:center;
+">
+
+<h2>
+
+🚀 Continue Exploring AI Image Tools
+
+</h2>
+
+<p style="
+max-width:700px;
+margin:20px auto;
+">
+
+Discover more AI-powered solutions designed to improve image quality, automate editing tasks, and help creators produce professional visual content faster.
+
+</p>
+
+<a
+href="blog.html"
+style="
+display:inline-block;
+padding:15px 35px;
+background:white;
+color:#4f46e5;
+border-radius:14px;
+font-weight:700;
+margin-top:10px;
+text-decoration:none;
+">
+
+Browse All Articles
+
+</a>
+
+</div>
+
+<h2 class="section-title">
+
+👨‍💻 About The Author
+
+</h2>
+
+<div style="
+background:white;
+padding:40px;
+border-radius:30px;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+margin-top:25px;
+">
+
+<div style="
+display:flex;
+align-items:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:25px;
+">
+
+<img
+src="images/file_00000000c940720a9a38bd79b452b5fc.png"
+style="
+width:90px;
+height:90px;
+border-radius:50%;
+object-fit:cover;
+"
+alt="Author">
+
+<div>
+
+<h3 style="
+font-size:1.5rem;
+margin-bottom:8px;
+">
+
+Smart AI Tools Guides
+
+</h3>
+
+<p>
+
+AI Tools Researcher • Digital Publisher • Technology Writer
+
+</p>
+
+</div>
+
+</div>
+
+<p>
+
+Smart AI Tools Guides publishes in-depth tutorials, tool reviews, image editing resources, SEO guides, and AI-focused educational content designed to help creators, businesses, and digital professionals make informed decisions.
+
+</p>
+
+<img
+src="images/file_0000000092c0720a9ce08cdfab929de5.png"
+style="
+width:100%;
+border-radius:24px;
+margin-top:25px;
+display:block;
+"
+alt="Author Banner">
+
+</div>
+
+</div>
+
+</body>
+
+</html>
